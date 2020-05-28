@@ -84,7 +84,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customer.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Maintenance.cs" />
     <Compile Include="Message.cs" />

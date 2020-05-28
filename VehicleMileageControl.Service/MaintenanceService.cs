@@ -116,6 +116,10 @@ namespace VehicleMileageControl.Service
             Message message = new Message();
             int mileageDifference = (newMileage - oldMileage);
 
+            // When this method returns MessageOne, stop it and start it again.
+            // Is mileageDifference counting from initial odomoter mileage, when the differene between any given odomoter mileage is 3000 or greater for any given other, or counting at all?
+            // Once method returns MessageOne, does it automatically stop and start again or will the message appear for every odomoter entry in the future?
+
             if (mileageDifference >= 3000)
             {
                 return message.MessageOne;
@@ -495,6 +499,23 @@ namespace VehicleMileageControl.Service
                 return message.MessageTwentysix;
             }
             else if (mileageDifference < 55000)
+            {
+                return null;
+            }
+            else
+            {
+                return message.MessageTwentyfive;
+            }
+        }
+        public string Alternator(int oldMileage, int newMileage)
+        {
+            Message message = new Message();
+            int mileageDifference = (newMileage - oldMileage);
+            if (mileageDifference >= 125000)
+            {
+                return message.MessageTwentyseven;
+            }
+            else if (mileageDifference < 125000)
             {
                 return null;
             }

@@ -66,5 +66,7 @@ namespace VehicleMileageControl.Data
         public int PlatinumOrIridiumSparkPlugChange { get; set; } // 90k - 100k
         [Required]
         public int CompleteRubberCrackInspection { get; set; } // 100k
+        [Required]
+        public int AlternatorChange { get; set; } // 100k - 150k
     }
 }

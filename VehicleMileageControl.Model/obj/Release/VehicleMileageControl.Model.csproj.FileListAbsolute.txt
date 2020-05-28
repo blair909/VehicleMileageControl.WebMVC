@@ -1,0 +1,2 @@
+C:\Users\Carson Blair\Source\Repos\VehicleMileageControl.WebMVC\VehicleMileageControl.Model\obj\Release\VehicleMileageControl.Model.csprojAssemblyReference.cache
+C:\Users\Carson Blair\Source\Repos\VehicleMileageControl.WebMVC\VehicleMileageControl.Model\obj\Release\VehicleMileageControl.Model.csproj.CoreCompileInputs.cache

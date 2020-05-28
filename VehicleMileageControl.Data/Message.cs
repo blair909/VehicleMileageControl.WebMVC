@@ -33,6 +33,7 @@ namespace VehicleMileageControl.Data
         public string MessageTwentythree = "Time to get new front tires. \n";
         public string MessageTwentyfour = "Time to get new rear tires. \n";
         public string MessageTwentyfive = "Sorry, that input is invalid. \n";
-        public string MessageTwentysix = "Time to get a new set of tires. ";
+        public string MessageTwentysix = "Time to get a new set of tires. \n";
+        public string MessageTwentyseven = "Your alternator may need to be changed soon. ";
     }
 }
