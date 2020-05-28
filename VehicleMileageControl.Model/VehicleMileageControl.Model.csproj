@@ -55,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MaintenanceCreate.cs" />
-    <Compile Include="MaintenanceDelete.cs" />
+    <Compile Include="MaintenanceListItem.cs" />
     <Compile Include="MaintenanceDetails.cs" />
     <Compile Include="MaintenanceEdit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

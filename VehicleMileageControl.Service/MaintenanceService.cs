@@ -5,6 +5,7 @@ using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 using VehicleMileageControl.Data;
+using VehicleMileageControl.Model;
 
 namespace VehicleMileageControl.Service
 {
@@ -17,22 +18,101 @@ namespace VehicleMileageControl.Service
         {
             _maintenanceUserId = maintenanceUserId;
         }
-        /*
- * IEnumerable<string> strings =
-    Enumerable.Repeat("I like programming.", x % 3000);
+        public bool CreateMaintenance(MaintenanceCreate model)
+        {
+            var entity =
+                new Maintenance()
+                {
+                    MaintenanceOwnerId = _maintenanceUserId,
+                    OdomoterMileage = model.OdomoterMileage,
+                    MaintenanceId = model.MaintenanceId,
+                    PersonalNoteTitle = model.PersonalNoteTitle,
+                    PersonalNoteContent = model.PersonalNoteContent,
+                    CreatedUtc = DateTimeOffset.Now
+                };
 
-foreach (String str in strings)
-{
-    Console.WriteLine(str);
-}
+            using (var ctx = new ApplicationDbContext())
+            {
+                ctx.Maintenances.Add(entity);
+                return ctx.SaveChanges() == 1;
+            }
+        }
+        public IEnumerable<MaintenanceListItem> GetMaintenances()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Maintenances
+                        .Where(e => e.MaintenanceOwnerId == _maintenanceUserId)
+                        .Select(
+                            e =>
+                                new MaintenanceListItem
+                                {
+                                    MaintenanceId = e.MaintenanceId,
+                                    OdomoterMileage = e.OdomoterMileage,
+                                    PersonalNoteTitle = e.PersonalNoteTitle
+                                }
+                        );
+                return query.ToArray();
+            }
+        }
+        public MaintenanceDetails GetMaintenanceById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Maintenances
+                        .Single(e => e.MaintenanceId == id && e.MaintenanceOwnerId == _maintenanceUserId);
+                return
+                    new MaintenanceDetails
+                    {
+                        MaintenanceId = entity.MaintenanceId,
+                        OdomoterMileage = entity.OdomoterMileage,
+                        PersonalNoteTitle = entity.PersonalNoteTitle,
+                        PersonalNoteContent = entity.PersonalNoteContent,
+                        CreatedUtc = entity.CreatedUtc,
+                        ModifiedUtc = entity.ModifiedUtc
+                    };
+            }
+        }
+        public bool UpdateMaintenance(MaintenanceEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Maintenances
+                        .Single(e => e.MaintenanceId == model.MaintenanceId && e.MaintenanceOwnerId == _maintenanceUserId);
 
-public decimal FindDifference(decimal nr1, decimal nr2)
-{
-  return Math.Abs(nr1 - nr2);
-}
-*/
+                entity.MaintenanceId = model.MaintenanceId;
+                entity.OdomoterMileage = model.OdomoterMileage;
+                entity.PersonalNoteTitle = model.PersonalNoteTitle;
+                entity.PersonalNoteContent = model.PersonalNoteContent;
+                entity.ModifiedUtc = DateTimeOffset.UtcNow;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+        public bool DeleteMaintenance(int MaintenanceId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Maintenances
+                        .Single(e => e.MaintenanceId == MaintenanceId && e.MaintenanceOwnerId == _maintenanceUserId);
+
+                ctx.Maintenances.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
         public string RegularOilAndFilter(int oldMileage, int newMileage)
         {
+            oldMileage = _maintenanceDirectory.OdomoterMileage;
+            newMileage = _maintenanceDirectory.OdomoterMileage;
             Message message = new Message();
             int mileageDifference = (newMileage - oldMileage);
 
@@ -423,11 +503,24 @@ public decimal FindDifference(decimal nr1, decimal nr2)
                 return message.MessageTwentyfive;
             }
         }
-
-
-        //public bool BetweenRanges(int a, int b, int number)
-        //{
-        //    return (a + 3000 <= number && number <= b + 3000);
-        //}
     }
+
+
+    //public bool BetweenRanges(int a, int b, int number)
+    //{
+    //    return (a + 3000 <= number && number <= b + 3000);
+    //}
+
+    //* IEnumerable<string> strings =
+    //Enumerable.Repeat("I like programming.", x % 3000);
+
+    //foreach (String str in strings)
+    //{
+    //Console.WriteLine(str);
+    //}
+
+    //public decimal FindDifference(decimal nr1, decimal nr2)
+    //{
+    //return Math.Abs(nr1 - nr2);
+    //}
 }

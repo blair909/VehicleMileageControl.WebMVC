@@ -1,0 +1,66 @@
+﻿@model VehicleMileageControl.Model.MaintenanceDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MaintenanceDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaintenanceId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaintenanceId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OdomoterMileage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OdomoterMileage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonalNoteTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonalNoteTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonalNoteContent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonalNoteContent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedUtc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedUtc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

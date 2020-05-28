@@ -66,6 +66,10 @@
       <Project>{732FC3B1-1E71-41E1-8E10-6E748C9B3448}</Project>
       <Name>VehicleMileageControl.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\VehicleMileageControl.Model\VehicleMileageControl.Model.csproj">
+      <Project>{A7C3CDBB-669A-4ADC-A862-A5D38A351689}</Project>
+      <Name>VehicleMileageControl.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -15,12 +15,14 @@ namespace VehicleMileageControl.Data
         [Required]
         public Guid MaintenanceOwnerId { get; set; }
         [Required]
+        public int OdomoterMileage { get; set; }
+        [Required]
+        public string PersonalNoteTitle { get; set; }
+        [Required]
+        public string PersonalNoteContent { get; set; }
+        [Required]
         public DateTimeOffset CreatedUtc { get; set; }
         [Required]
         public DateTimeOffset ModifiedUtc { get; set; }
-        [Required]
-        public int OdomoterMileage { get; set; }
-        [Required]
-        public string Message { get; set; }
     }
 }
