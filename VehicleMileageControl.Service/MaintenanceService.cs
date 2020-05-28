@@ -109,12 +109,13 @@ namespace VehicleMileageControl.Service
                 return ctx.SaveChanges() == 1;
             }
         }
-        public string RegularOilAndFilter(int oldMileage, int newMileage)
+        public string RegularOilAndFilter(int id, int newMileage)
         {
-            oldMileage = _maintenanceDirectory.OdomoterMileage;
-            newMileage = _maintenanceDirectory.OdomoterMileage;
+            var maintenance = GetMaintenanceById(id);
+            int mileageDifference = (newMileage - maintenance.OdomoterMileage);
+
             Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
+            // int mileageDifference = (newMileage - oldMileage);
 
             // When this method returns MessageOne, stop it and start it again.
             // Is mileageDifference counting from initial odomoter mileage, when the differene between any given odomoter mileage is 3000 or greater for any given other, or counting at all?
