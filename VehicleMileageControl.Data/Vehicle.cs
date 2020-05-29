@@ -55,6 +55,8 @@ namespace VehicleMileageControl.Data
         [Required]
         public int SuspensionComponentInspection { get; set; } // 60k
         [Required]
+        public int SteeringSystemInspection { get; set; } // 60k
+        [Required]
         public int BrakeRotorChange { get; set; } // 60k - 70k
         [Required]
         public int RadiatorHoseChange { get; set; } // 60k - 70k

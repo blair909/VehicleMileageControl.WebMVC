@@ -9,7 +9,6 @@ namespace VehicleMileageControl.Model
 {
     public class MaintenanceEdit
     {
-        [Display(Name = "Maintenance Id")]
         public int MaintenanceId { get; set; }
         [Required]
         [Range(0, 1000000, ErrorMessage = "Please enter a whole number between 0 and 1,000,000 with no decimal points, letters, or symbols. ")]

@@ -59,6 +59,10 @@
     <Compile Include="MaintenanceDetails.cs" />
     <Compile Include="MaintenanceEdit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SavedPaymentInformationCreate.cs" />
+    <Compile Include="SavedPaymentInformationDetails.cs" />
+    <Compile Include="SavedPaymentInformationEdit.cs" />
+    <Compile Include="SavedPaymentInformationListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

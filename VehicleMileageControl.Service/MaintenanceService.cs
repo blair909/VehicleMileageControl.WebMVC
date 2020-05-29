@@ -109,440 +109,359 @@ namespace VehicleMileageControl.Service
                 return ctx.SaveChanges() == 1;
             }
         }
-        public string RegularOilAndFilter(int id, int newMileage)
-        {
-            var maintenance = GetMaintenanceById(id);
-            int mileageDifference = (newMileage - maintenance.OdomoterMileage);
 
-            Message message = new Message();
-            // int mileageDifference = (newMileage - oldMileage);
+        // int mileageDifference = (newMileage - oldMileage);
 
-            // When this method returns MessageOne, stop it and start it again.
-            // Is mileageDifference counting from initial odomoter mileage, when the differene between any given odomoter mileage is 3000 or greater for any given other, or counting at all?
-            // Once method returns MessageOne, does it automatically stop and start again or will the message appear for every odomoter entry in the future?
-
-            if (mileageDifference >= 3000)
-            {
-                return message.MessageOne;
-            }
-            else if (mileageDifference < 3000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string TireRotate(int oldMileage, int newMileage)
+        // When this method returns MessageOne, stop it and start it again.
+        // Is mileageDifference counting from initial odomoter mileage, when the differene between any given odomoter mileage is 3000 or greater for any given other, or counting at all?
+        // Once method returns MessageOne, does it automatically stop and start again or will the message appear for every odomoter entry in the future?
+        public string MessagePopulateForMileage(int mileage)
         {
             Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 6000)
-            {
-                return message.MessageTwo;
-            }
-            else if (mileageDifference < 6000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string SyntheticOilAndFilter(int oldMileage, int newMileage)
-        {
-            Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 7000)
-            {
-                return message.MessageThree;
-            }
-            else if (mileageDifference < 7000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string TireAlignment(int oldMileage, int newMileage)
-        {
-            Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 9000)
-            {
-                return message.MessageFour;
-            }
-            else if (mileageDifference < 9000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string CompleteInspection(int oldMileage, int newMileage)
-        {
-            Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 15000)
-            {
-                return message.MessageFive;
-            }
-            else if (mileageDifference < 15000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string EngineAirFilter(int oldMileage, int newMileage)
-        {
-            Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 20000)
-            {
-                return message.MessageSix;
-            }
-            else if (mileageDifference < 20000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string CabinAirFilter(int oldMileage, int newMileage)
-        {
-            Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 20000)
-            {
-                return message.MessageSeven;
-            }
-            else if (mileageDifference < 20000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string CopperSparkPlugs(int oldMileage, int newMileage)
-        {
-            Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 20000)
-            {
-                return message.MessageEight;
-            }
-            else if (mileageDifference < 20000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string FuelFilter(int oldMileage, int newMileage)
-        {
-            Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 30000)
-            {
-                return message.MessageNine;
-            }
-            else if (mileageDifference < 30000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string BrakeFluid(int oldMileage, int newMileage)
-        {
-            Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 35000)
-            {
-                return message.MessageTen;
-            }
-            else if (mileageDifference < 35000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string TransmissionFluidPanGasketAndFilter(int oldMileage, int newMileage)
-        {
-            Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 40000)
-            {
-                return message.MessageEleven;
-            }
-            else if (mileageDifference < 40000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string BrakePads(int oldMileage, int newMileage)
-        {
-            Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 45000)
-            {
-                return message.MessageTwelve;
-            }
-            else if (mileageDifference < 45000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string Battery(int oldMileage, int newMileage)
-        {
-            Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 50000)
-            {
-                return message.MessageThirteen;
-            }
-            else if (mileageDifference < 50000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string EngineCoolant(int oldMileage, int newMileage)
-        {
-            Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 55000)
-            {
-                return message.MessageFourteen;
-            }
-            else if (mileageDifference < 55000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string HVAC(int oldMileage, int newMileage)
-        {
-            Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 60000)
-            {
-                return message.MessageFifteen;
-            }
-            else if (mileageDifference < 60000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string SuspensionComponents(int oldMileage, int newMileage)
-        {
-            Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 60000)
-            {
-                return message.MessageSixteen;
-            }
-            else if (mileageDifference < 60000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string BrakeRotors(int oldMileage, int newMileage)
-        {
-            Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 60000)
-            {
-                return message.MessageSeventeen;
-            }
-            else if (mileageDifference < 60000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string RadiatorHose(int oldMileage, int newMileage)
-        {
-            Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 60000)
-            {
-                return message.MessageEighteen;
-            }
-            else if (mileageDifference < 60000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string TimingBelt(int oldMileage, int newMileage)
-        {
-            Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 70000)
-            {
-                return message.MessageNineteen;
-            }
-            else if (mileageDifference < 70000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string PowerSteeringFluid(int oldMileage, int newMileage)
-        {
-            Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 70000)
-            {
-                return message.MessageTwenty;
-            }
-            else if (mileageDifference < 70000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string PlatinumOrIridiumSparkPlugs(int oldMileage, int newMileage)
-        {
-            Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 80000)
-            {
-                return message.MessageTwentyone;
-            }
-            else if (mileageDifference < 80000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string RubberCracks(int oldMileage, int newMileage)
-        {
-            Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 100000)
-            {
-                return message.MessageTwentytwo;
-            }
-            else if (mileageDifference < 100000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string Tires(int oldMileage, int newMileage)
-        {
-            Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 55000)
-            {
-                return message.MessageTwentysix;
-            }
-            else if (mileageDifference < 55000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
-            }
-        }
-        public string Alternator(int oldMileage, int newMileage)
-        {
-            Message message = new Message();
-            int mileageDifference = (newMileage - oldMileage);
-            if (mileageDifference >= 125000)
-            {
-                return message.MessageTwentyseven;
-            }
-            else if (mileageDifference < 125000)
-            {
-                return null;
-            }
-            else
-            {
-                return message.MessageTwentyfive;
+            // Regular Oil and Filter
+            for (int x = 1; x < 330; x++)
+            {
+                int z = (3000 * x) + 500;
+                int y = (3000 * x);
+                if (y <= mileage && mileage <= z)
+                {
+                    return message.MessageOne;
+                }
+                else if (y > mileage && mileage > z)
+                {
+                    return null;
+                }
+                else
+                {
+                    return message.MessageTwentyfive;
+                }
+            }
+            // Tire Rotation
+            for (int x = 1; x < 165; x++)
+            {
+                int z = (6000 * x) + 750;
+                int y = (6000 * x);
+                if (y <= mileage && mileage <= z)
+                {
+                    return message.MessageTwo;
+                }
+                else if (y > mileage && mileage > z)
+                {
+                    return null;
+                }
+                else
+                {
+                    return message.MessageTwentyfive;
+                }
+            }
+            // Synthetic Oil and Filter
+            for (int x = 1; x < 140; x++)
+            {
+                int z = (7000 * x) + 1000;
+                int y = (7000 * x);
+                if (y <= mileage && mileage <= z)
+                {
+                    return message.MessageThree;
+                }
+                else if (y > mileage && mileage > z)
+                {
+                    return null;
+                }
+                else
+                {
+                    return message.MessageTwentyfive;
+                }
+            }
+            // Tire Alignment
+            for (int x = 1; x < 110; x++)
+            {
+                int z = (9000 * x) + 1000;
+                int y = (9000 * x);
+                if (y <= mileage && mileage <= z)
+                {
+                    return message.MessageFour;
+                }
+                else if (y > mileage && mileage > z)
+                {
+                    return null;
+                }
+                else
+                {
+                    return message.MessageTwentyfive;
+                }
+            }
+            // Complete Vehicle Inspection
+            for (int x = 1; x < 65; x++)
+            {
+                int z = (15000 * x) + 1000;
+                int y = (15000 * x);
+                if (y <= mileage && mileage <= z)
+                {
+                    return message.MessageFive;
+                }
+                else if (y > mileage && mileage > z)
+                {
+                    return null;
+                }
+                else
+                {
+                    return message.MessageTwentyfive;
+                }
+            }
+            // Engine Air Filter, Cabin Air Filter, and Copper Spark Plugs
+            for (int x = 1; x < 45; x++)
+            {
+                int z = (20000 * x) + 1000;
+                int y = (20000 * x);
+                if (y <= mileage && mileage <= z)
+                {
+                    return message.MessageSix + message.MessageSeven + message.MessageEight;
+                }
+                else if (y > mileage && mileage > z)
+                {
+                    return null;
+                }
+                else
+                {
+                    return message.MessageTwentyfive;
+                }
+            }
+            // Fuel Filter
+            for (int x = 1; x < 32; x++)
+            {
+                int z = (30000 * x) + 1000;
+                int y = (30000 * x);
+                if (y <= mileage && mileage <= z)
+                {
+                    return message.MessageNine;
+                }
+                else if (y > mileage && mileage > z)
+                {
+                    return null;
+                }
+                else
+                {
+                    return message.MessageTwentyfive;
+                }
+            }
+            // Brake Fluid
+            for (int x = 1; x < 28; x++)
+            {
+                int z = (35000 * x) + 1000;
+                int y = (35000 * x);
+                if (y <= mileage && mileage <= z)
+                {
+                    return message.MessageTen;
+                }
+                else if (y > mileage && mileage > z)
+                {
+                    return null;
+                }
+                else
+                {
+                    return message.MessageTwentyfive;
+                }
+            }
+            // Transmission Fluid, Pan Gasket, Filter, and Front Tires (FWD) or Rear Tires (RWD)
+            for (int x = 1; x < 24; x++)
+            {
+                int z = (40000 * x) + 1000;
+                int y = (40000 * x);
+                if (y <= mileage && mileage <= z)
+                {
+                    return message.MessageEleven + message.MessageTwentythree;
+                }
+                else if (y > mileage && mileage > z)
+                {
+                    return null;
+                }
+                else
+                {
+                    return message.MessageTwentyfive;
+                }
+            }
+            // Brake Pads
+            for (int x = 1; x < 22; x++)
+            {
+                int z = (45000 * x) + 1000;
+                int y = (45000 * x);
+                if (y <= mileage && mileage <= z)
+                {
+                    return message.MessageTwelve;
+                }
+                else if (y > mileage && mileage > z)
+                {
+                    return null;
+                }
+                else
+                {
+                    return message.MessageTwentyfive;
+                }
+            }
+            // Battery and Tires (AWD)
+            for (int x = 1; x < 19; x++)
+            {
+                int z = (50000 * x) + 1000;
+                int y = (50000 * x);
+                if (y <= mileage && mileage <= z)
+                {
+                    return message.MessageThirteen + message.MessageTwentyseven;
+                }
+                else if (y > mileage && mileage > z)
+                {
+                    return null;
+                }
+                else
+                {
+                    return message.MessageTwentyfive;
+                }
+            }
+            // Engine Coolant
+            for (int x = 1; x < 18; x++)
+            {
+                int z = (55000 * x) + 1000;
+                int y = (55000 * x);
+                if (y <= mileage && mileage <= z)
+                {
+                    return message.MessageFourteen;
+                }
+                else if (y > mileage && mileage > z)
+                {
+                    return null;
+                }
+                else
+                {
+                    return message.MessageTwentyfive;
+                }
+            }
+            // HVAC, Suspension Components, Brake Rotors, Radiator Hoses, and Front Tires (RWD) or Rear Tires (FWD)
+            for (int x = 1; x < 16; x++)
+            {
+                int z = (60000 * x) + 1000;
+                int y = (60000 * x);
+                if (y <= mileage && mileage <= z)
+                {
+                    return message.MessageFifteen + message.MessageSixteen + message.MessageSeventeen + message.MessageEighteen + message.MessageTwentyfour;
+                }
+                else if (y > mileage && mileage > z)
+                {
+                    return null;
+                }
+                else
+                {
+                    return message.MessageTwentyfive;
+                }
+            }
+            // Timing Belt and Power Steering Fluid
+            for (int x = 1; x < 14; x++)
+            {
+                int z = (70000 * x) + 1000;
+                int y = (70000 * x);
+                if (y <= mileage && mileage <= z)
+                {
+                    return message.MessageNineteen + message.MessageTwenty;
+                }
+                else if (y > mileage && mileage > z)
+                {
+                    return null;
+                }
+                else
+                {
+                    return message.MessageTwentyfive;
+                }
+            }
+            // Platinum or Iridium Spark Plugs
+            for (int x = 1; x < 12; x++)
+            {
+                int z = (80000 * x) + 1000;
+                int y = (80000 * x);
+                if (y <= mileage && mileage <= z)
+                {
+                    return message.MessageTwentyone;
+                }
+                else if (y > mileage && mileage > z)
+                {
+                    return null;
+                }
+                else
+                {
+                    return message.MessageTwentyfive;
+                }
+            }
+            // Rubber Cracks
+            for (int x = 1; x < 10; x++)
+            {
+                int z = (100000 * x) + 1000;
+                int y = (100000 * x);
+                if (y <= mileage && mileage <= z)
+                {
+                    return message.MessageTwentytwo;
+                }
+                else if (y > mileage && mileage > z)
+                {
+                    return null;
+                }
+                else
+                {
+                    return message.MessageTwentyfive;
+                }
+            }
+            // Alternator
+            for (int x = 1; x < 8; x++)
+            {
+                int z = (125000 * x) + 1000;
+                int y = (125000 * x);
+                if (y <= mileage && mileage <= z)
+                {
+                    return message.MessageTwentysix;
+                }
+                else if (y > mileage && mileage > z)
+                {
+                    return null;
+                }
+                else
+                {
+                    return message.MessageTwentyfive;
+                }
             }
         }
     }
-
-
-    //public bool BetweenRanges(int a, int b, int number)
-    //{
-    //    return (a + 3000 <= number && number <= b + 3000);
-    //}
-
-    //* IEnumerable<string> strings =
-    //Enumerable.Repeat("I like programming.", x % 3000);
-
-    //foreach (String str in strings)
-    //{
-    //Console.WriteLine(str);
-    //}
-
-    //public decimal FindDifference(decimal nr1, decimal nr2)
-    //{
-    //return Math.Abs(nr1 - nr2);
-    //}
 }
+//public string RegularOilAndFilter(int id, int newMileage)
+//{
+//    var maintenance = GetMaintenanceById(id);
+//    int mileageDifference = (newMileage - maintenance.OdomoterMileage);
+
+//    Message message = new Message();
+
+//    if (mileageDifference >= 3000)
+//    {
+//        return message.MessageOne;
+//    }
+//    else if (mileageDifference < 3000)
+//    {
+//        return null;
+//    }
+//    else
+//    {
+//        return message.MessageTwentyfive;
+//    }
+//}
+
+//public bool BetweenRanges(int a, int b, int number)
+//{
+//    return (a + 3000 <= number && number <= b + 3000);
+//}
+
+//* IEnumerable<string> strings =
+//Enumerable.Repeat("I like programming.", x % 3000);
+
+//foreach (String str in strings)
+//{
+//Console.WriteLine(str);
+//}
+
+//public decimal FindDifference(decimal nr1, decimal nr2)
+//{
+//return Math.Abs(nr1 - nr2);
+//}
