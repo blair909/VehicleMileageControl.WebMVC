@@ -21,6 +21,6 @@ namespace VehicleMileageControl.Model
         [Display(Name = "Personal Note Content")]
         public string PersonalNoteContent { get; set; }
         [Display(Name = "Date Modified")]
-        public DateTimeOffset ModifiedUtc { get; set; }
+        public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }

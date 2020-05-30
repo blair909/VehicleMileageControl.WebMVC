@@ -73,7 +73,6 @@ namespace VehicleMileageControl.Service
                     };
             }
         }
-
         public bool UpdatePaymentInformation(SavedPaymentInformationEdit model)
         {
             using (var ctx = new ApplicationDbContext())

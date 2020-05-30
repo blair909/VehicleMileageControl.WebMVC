@@ -424,6 +424,20 @@ namespace VehicleMileageControl.Service
                     return message.MessageTwentyfive;
                 }
             }
+            return null;
+        }
+        public bool ReturnMessage(Maintenance ret)
+        {
+            Maintenance maintenance = new Maintenance();
+            int mileage = maintenance.OdomoterMileage;
+            ret = MessagePopulateForMileage(mileage);
+
+            using (var ctx = new ApplicationDbContext())
+            {
+                ctx.Maintenances.Add(ret);
+                return ctx.SaveChanges() == 1;
+            }
+
         }
     }
 }

@@ -23,6 +23,7 @@ namespace VehicleMileageControl.Data
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
         [Required]
-        public DateTimeOffset ModifiedUtc { get; set; }
+        public DateTimeOffset? ModifiedUtc { get; set; }
+        public Message Message { get; set; }
     }
 }

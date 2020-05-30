@@ -54,15 +54,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MaintenanceCreate.cs" />
-    <Compile Include="MaintenanceListItem.cs" />
-    <Compile Include="MaintenanceDetails.cs" />
-    <Compile Include="MaintenanceEdit.cs" />
+    <Compile Include="MaintenanceModel\MaintenanceCreate.cs" />
+    <Compile Include="MaintenanceModel\MaintenanceListItem.cs" />
+    <Compile Include="MaintenanceModel\MaintenanceDetails.cs" />
+    <Compile Include="MaintenanceModel\MaintenanceEdit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SavedPaymentInformationCreate.cs" />
-    <Compile Include="SavedPaymentInformationDetails.cs" />
-    <Compile Include="SavedPaymentInformationEdit.cs" />
-    <Compile Include="SavedPaymentInformationListItem.cs" />
+    <Compile Include="SavedPaymentInformationModel\SavedPaymentInformationCreate.cs" />
+    <Compile Include="SavedPaymentInformationModel\SavedPaymentInformationDetails.cs" />
+    <Compile Include="SavedPaymentInformationModel\SavedPaymentInformationEdit.cs" />
+    <Compile Include="SavedPaymentInformationModel\SavedPaymentInformationListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

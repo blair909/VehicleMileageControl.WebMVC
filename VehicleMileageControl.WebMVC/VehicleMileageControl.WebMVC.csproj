@@ -255,10 +255,14 @@
     <Content Include="Views\Maintenance\Details.cshtml" />
     <Content Include="Views\Maintenance\Edit.cshtml" />
     <Content Include="Views\Maintenance\Index.cshtml" />
+    <Content Include="Views\SavedPaymentInformation\Create.cshtml" />
+    <Content Include="Views\SavedPaymentInformation\Details.cshtml" />
+    <Content Include="Views\SavedPaymentInformation\Delete.cshtml" />
+    <Content Include="Views\SavedPaymentInformation\Edit.cshtml" />
+    <Content Include="Views\SavedPaymentInformation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\SavedPaymentInformation\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
