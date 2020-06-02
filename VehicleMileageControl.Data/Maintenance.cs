@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Dynamic;
 using System.Linq;
 using System.Text;
@@ -17,13 +18,12 @@ namespace VehicleMileageControl.Data
         [Required]
         public int OdomoterMileage { get; set; }
         [Required]
-        public string PersonalNoteTitle { get; set; }
-        [Required]
-        public string PersonalNoteContent { get; set; }
-        [Required]
         public DateTimeOffset CreatedUtc { get; set; }
         [Required]
         public DateTimeOffset? ModifiedUtc { get; set; }
-        public Message Message { get; set; }
+        [ForeignKey(nameof(MessageId))]
+        public int MessageId { get; set; }
+        public string MessageStr { get; set; }
+        public virtual Message Message { get; set; }
     }
 }

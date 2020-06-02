@@ -11,110 +11,11 @@ namespace VehicleMileageControl.Service
 {
     public class MaintenanceService
     {
-        private readonly Maintenance _maintenanceDirectory = new Maintenance();
-        private readonly Message _messageDirectory = new Message();
         private readonly Guid _maintenanceUserId;
         public MaintenanceService(Guid maintenanceUserId)
         {
             _maintenanceUserId = maintenanceUserId;
         }
-        public bool CreateMaintenance(MaintenanceCreate model)
-        {
-            var entity =
-                new Maintenance()
-                {
-                    MaintenanceOwnerId = _maintenanceUserId,
-                    OdomoterMileage = model.OdomoterMileage,
-                    MaintenanceId = model.MaintenanceId,
-                    PersonalNoteTitle = model.PersonalNoteTitle,
-                    PersonalNoteContent = model.PersonalNoteContent,
-                    CreatedUtc = DateTimeOffset.Now
-                };
-
-            using (var ctx = new ApplicationDbContext())
-            {
-                ctx.Maintenances.Add(entity);
-                return ctx.SaveChanges() == 1;
-            }
-        }
-        public IEnumerable<MaintenanceListItem> GetMaintenances()
-        {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var query =
-                    ctx
-                        .Maintenances
-                        .Where(e => e.MaintenanceOwnerId == _maintenanceUserId)
-                        .Select(
-                            e =>
-                                new MaintenanceListItem
-                                {
-                                    MaintenanceId = e.MaintenanceId,
-                                    OdomoterMileage = e.OdomoterMileage,
-                                    PersonalNoteTitle = e.PersonalNoteTitle
-                                }
-                        );
-                return query.ToArray();
-            }
-        }
-        public MaintenanceDetails GetMaintenanceById(int id)
-        {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var entity =
-                    ctx
-                        .Maintenances
-                        .Single(e => e.MaintenanceId == id && e.MaintenanceOwnerId == _maintenanceUserId);
-                return
-                    new MaintenanceDetails
-                    {
-                        MaintenanceId = entity.MaintenanceId,
-                        OdomoterMileage = entity.OdomoterMileage,
-                        PersonalNoteTitle = entity.PersonalNoteTitle,
-                        PersonalNoteContent = entity.PersonalNoteContent,
-                        CreatedUtc = entity.CreatedUtc,
-                        ModifiedUtc = entity.ModifiedUtc
-                    };
-            }
-        }
-        public bool UpdateMaintenance(MaintenanceEdit model)
-        {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var entity =
-                    ctx
-                        .Maintenances
-                        .Single(e => e.MaintenanceId == model.MaintenanceId && e.MaintenanceOwnerId == _maintenanceUserId);
-
-                entity.MaintenanceId = model.MaintenanceId;
-                entity.OdomoterMileage = model.OdomoterMileage;
-                entity.PersonalNoteTitle = model.PersonalNoteTitle;
-                entity.PersonalNoteContent = model.PersonalNoteContent;
-                entity.ModifiedUtc = DateTimeOffset.UtcNow;
-
-                return ctx.SaveChanges() == 1;
-            }
-        }
-        public bool DeleteMaintenance(int MaintenanceId)
-        {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var entity =
-                    ctx
-                        .Maintenances
-                        .Single(e => e.MaintenanceId == MaintenanceId && e.MaintenanceOwnerId == _maintenanceUserId);
-
-                ctx.Maintenances.Remove(entity);
-
-                return ctx.SaveChanges() == 1;
-            }
-        }
-
-        // int mileageDifference = (newMileage - oldMileage);
-
-        // When this method returns MessageOne, stop it and start it again.
-        // Is mileageDifference counting from initial odomoter mileage, when the differene between any given odomoter mileage is 3000 or greater for any given other, or counting at all?
-        // Once method returns MessageOne, does it automatically stop and start again or will the message appear for every odomoter entry in the future?
         public string MessagePopulateForMileage(int mileage)
         {
             Message message = new Message();
@@ -426,21 +327,110 @@ namespace VehicleMileageControl.Service
             }
             return null;
         }
-        public bool ReturnMessage(Maintenance ret)
+        public bool CreateMaintenance(MaintenanceCreate model)
         {
             Maintenance maintenance = new Maintenance();
             int mileage = maintenance.OdomoterMileage;
-            ret = MessagePopulateForMileage(mileage);
+            maintenance.MessageStr = MessagePopulateForMileage(mileage);
+
+            var entity =
+                new Maintenance()
+                {
+                    MaintenanceOwnerId = _maintenanceUserId,
+                    OdomoterMileage = model.OdomoterMileage,
+                    MaintenanceId = model.MaintenanceId,
+                    CreatedUtc = DateTimeOffset.Now,
+                    MessageId = model.MessageId,
+                    MessageStr = model.MessageStr
+                };
 
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Maintenances.Add(ret);
+                ctx.Maintenances.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
+        }
+        public IEnumerable<MaintenanceListItem> GetMaintenances()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Maintenances
+                        .Where(e => e.MaintenanceOwnerId == _maintenanceUserId)
+                        .Select(
+                            e =>
+                                new MaintenanceListItem
+                                {
+                                    MaintenanceId = e.MaintenanceId,
+                                    OdomoterMileage = e.OdomoterMileage
+                                }
+                        );
+                return query.ToArray();
+            }
+        }
+        public MaintenanceDetails GetMaintenanceById(int id)
+        {
+            Maintenance maintenance = new Maintenance();
+            int mileage = maintenance.OdomoterMileage;
+            maintenance.MessageStr = MessagePopulateForMileage(mileage);
 
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Maintenances
+                        .Single(e => e.MaintenanceId == id && e.MaintenanceOwnerId == _maintenanceUserId);
+                return
+                    new MaintenanceDetails
+                    {
+                        MaintenanceId = entity.MaintenanceId,
+                        OdomoterMileage = entity.OdomoterMileage,
+                        CreatedUtc = entity.CreatedUtc,
+                        ModifiedUtc = entity.ModifiedUtc,
+                        MessageId = entity.MessageId,
+                        MessageStr = entity.MessageStr
+                    };
+            }
+        }
+        public bool UpdateMaintenance(MaintenanceEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Maintenances
+                        .Single(e => e.MaintenanceId == model.MaintenanceId && e.MaintenanceOwnerId == _maintenanceUserId);
+
+                entity.MaintenanceId = model.MaintenanceId;
+                entity.OdomoterMileage = model.OdomoterMileage;
+                entity.ModifiedUtc = DateTimeOffset.UtcNow;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+        public bool DeleteMaintenance(int MaintenanceId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Maintenances
+                        .Single(e => e.MaintenanceId == MaintenanceId && e.MaintenanceOwnerId == _maintenanceUserId);
+
+                ctx.Maintenances.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
         }
     }
 }
+// int mileageDifference = (newMileage - oldMileage);
+
+// When this method returns MessageOne, stop it and start it again.
+// Is mileageDifference counting from initial odomoter mileage, when the differene between any given odomoter mileage is 3000 or greater for any given other, or counting at all?
+// Once method returns MessageOne, does it automatically stop and start again or will the message appear for every odomoter entry in the future?
+
 //public string RegularOilAndFilter(int id, int newMileage)
 //{
 //    var maintenance = GetMaintenanceById(id);

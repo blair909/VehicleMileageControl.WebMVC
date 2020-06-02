@@ -58,6 +58,7 @@
     <Compile Include="MaintenanceModel\MaintenanceListItem.cs" />
     <Compile Include="MaintenanceModel\MaintenanceDetails.cs" />
     <Compile Include="MaintenanceModel\MaintenanceEdit.cs" />
+    <Compile Include="MessageModel\MessageDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SavedPaymentInformationModel\SavedPaymentInformationCreate.cs" />
     <Compile Include="SavedPaymentInformationModel\SavedPaymentInformationDetails.cs" />
@@ -71,6 +72,12 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VehicleMileageControl.Data\VehicleMileageControl.Data.csproj">
+      <Project>{732FC3B1-1E71-41E1-8E10-6E748C9B3448}</Project>
+      <Name>VehicleMileageControl.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

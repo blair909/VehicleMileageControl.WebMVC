@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using VehicleMileageControl.Data;
 
 namespace VehicleMileageControl.Model
 {
@@ -14,13 +16,11 @@ namespace VehicleMileageControl.Model
         [Range(0, 1000000, ErrorMessage = "Please enter a whole number between 0 and 1,000,000 with no decimal points, letters, or symbols. ")]
         [Display(Name = "Odometer Mileage")]
         public int OdomoterMileage { get; set; }
-        [MaxLength(80, ErrorMessage = "Please enter less than 80 characters. ")]
-        [Display(Name = "Personal Note Title")]
-        public string PersonalNoteTitle { get; set; }
-        [MaxLength(5000, ErrorMessage = "Please enter less than 5000 characters. ")]
-        [Display(Name = "Personal Note Content")]
-        public string PersonalNoteContent { get; set; }
         [Display(Name = "Date Created")]
         public DateTimeOffset CreatedUtc { get; set; }
+        [Display(Name = "Message Id")]
+        public int MessageId { get; set; }
+        [Display(Name = "Message")]
+        public string MessageStr { get; set; }
     }
 }

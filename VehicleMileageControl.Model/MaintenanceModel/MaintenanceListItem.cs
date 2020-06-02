@@ -14,7 +14,5 @@ namespace VehicleMileageControl.Model
         [Required]
         [Display(Name = "Odometer Mileage")]
         public int OdomoterMileage { get; set; }
-        [Display(Name = "Personal Note Title")]
-        public string PersonalNoteTitle { get; set; }
     }
 }
