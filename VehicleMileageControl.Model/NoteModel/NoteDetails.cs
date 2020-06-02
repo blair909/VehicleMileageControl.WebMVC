@@ -5,17 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VehicleMileageControl.Data
+namespace VehicleMileageControl.Model.NoteModel
 {
-    public class Note
+    public class NoteDetails
     {
-        [Key]
+        [Display(Name = "Note Id")]
         public int NoteId { get; set; }
-        [Required]
-        public Guid NoteOwnerId { get; set; }
-        [Required]
+        [Display(Name = "Note Title")]
         public string NoteTitle { get; set; }
-        [Required]
+        [Display(Name = "Note Content")]
         public string NoteContent { get; set; }
     }
 }

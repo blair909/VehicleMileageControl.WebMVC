@@ -36,6 +36,7 @@ namespace VehicleMileageControl.Data
         public DbSet<SavedPaymentInformation> SavedPaymentInformations { get; set; }
         public DbSet<VehicleInformation> VehicleInformations { get; set; }
         public DbSet<Message> Messages { get; set; }
+        public DbSet<Note> Notes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

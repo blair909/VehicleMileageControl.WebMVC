@@ -409,14 +409,14 @@ namespace VehicleMileageControl.Service
                 return ctx.SaveChanges() == 1;
             }
         }
-        public bool DeleteMaintenance(int MaintenanceId)
+        public bool DeleteMaintenance(int maintenanceId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Maintenances
-                        .Single(e => e.MaintenanceId == MaintenanceId && e.MaintenanceOwnerId == _maintenanceUserId);
+                        .Single(e => e.MaintenanceId == maintenanceId && e.MaintenanceOwnerId == _maintenanceUserId);
 
                 ctx.Maintenances.Remove(entity);
 

@@ -12,7 +12,6 @@ namespace VehicleMileageControl.Model
     {
         [Display(Name = "Maintenance Id")]
         public int MaintenanceId { get; set; }
-        [Required]
         [Display(Name = "Odometer Mileage")]
         public int OdomoterMileage { get; set; }
         [Display(Name = "Date Created")]
