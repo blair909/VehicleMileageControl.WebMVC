@@ -345,7 +345,8 @@ namespace VehicleMileageControl.Service
                     MessageId = model.MessageId,
                     MessageStr = model.MessageStr,
                     VehicleInformationId = model.VehicleInformationId,
-                    VehicleInformationStr = model.VehicleInformationStr
+                    VehicleInformationStr = model.VehicleInformationStr,
+                    NoteId = model.NoteId
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -396,7 +397,8 @@ namespace VehicleMileageControl.Service
                         MessageId = entity.MessageId,
                         MessageStr = entity.MessageStr,
                         VehicleInformationId = entity.VehicleInformationId,
-                        VehicleInformationStr = entity.VehicleInformationStr
+                        VehicleInformationStr = entity.VehicleInformationStr,
+                        NoteId = entity.NoteId
                     };
             }
         }

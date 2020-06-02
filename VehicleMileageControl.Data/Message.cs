@@ -11,7 +11,9 @@ namespace VehicleMileageControl.Data
     {
         [Key]
         public int MessageId { get; set; }
+        [Required]
         public Guid MessageOwnerId { get; set; }
+        public string NewMessage { get; set; }
         public string MessageOne
         {
             get { return MessageOne; }

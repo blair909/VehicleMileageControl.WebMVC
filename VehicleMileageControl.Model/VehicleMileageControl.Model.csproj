@@ -58,7 +58,9 @@
     <Compile Include="MaintenanceModel\MaintenanceListItem.cs" />
     <Compile Include="MaintenanceModel\MaintenanceDetails.cs" />
     <Compile Include="MaintenanceModel\MaintenanceEdit.cs" />
+    <Compile Include="MessageModel\MessageCreate.cs" />
     <Compile Include="MessageModel\MessageDetails.cs" />
+    <Compile Include="MessageModel\MessageEdit.cs" />
     <Compile Include="MessageModel\MessageListItem.cs" />
     <Compile Include="NoteModel\NoteCreate.cs" />
     <Compile Include="NoteModel\NoteDetails.cs" />
@@ -69,7 +71,9 @@
     <Compile Include="SavedPaymentInformationModel\SavedPaymentInformationDetails.cs" />
     <Compile Include="SavedPaymentInformationModel\SavedPaymentInformationEdit.cs" />
     <Compile Include="SavedPaymentInformationModel\SavedPaymentInformationListItem.cs" />
+    <Compile Include="VehicleInformationModel\VehicleInformationCreate.cs" />
     <Compile Include="VehicleInformationModel\VehicleInformationDetails.cs" />
+    <Compile Include="VehicleInformationModel\VehicleInformationEdit.cs" />
     <Compile Include="VehicleInformationModel\VehicleInformationListItem.cs" />
   </ItemGroup>
   <ItemGroup>

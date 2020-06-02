@@ -16,6 +16,21 @@ namespace VehicleMileageControl.Service
         {
             _messageUserId = messageUserId;
         }
+        public bool CreateMessage(MessageCreate model)
+        {
+            var entity =
+                new Message()
+                {
+                    MessageId = model.MessageId,
+                    NewMessage = model.NewMessage
+                };
+
+            using (var ctx = new ApplicationDbContext())
+            {
+                ctx.Messages.Add(entity);
+                return ctx.SaveChanges() == 1;
+            }
+        }
         public IEnumerable<MessageListItem> GetMessages()
         {
             using (var ctx = new ApplicationDbContext())
@@ -76,14 +91,29 @@ namespace VehicleMileageControl.Service
                     };
             }
         }
-        public bool DeleteMessage(int MessageId)
+        public bool UpdateMessage(MessageEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Messages
-                        .Single(e => e.MessageId == MessageId && e.MessageOwnerId == _messageUserId);
+                        .Single(e => e.MessageId == model.MessageId && e.MessageOwnerId == _messageUserId);
+
+                entity.MessageId = model.MessageId;
+                entity.NewMessage = model.NewMessage;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+        public bool DeleteMessage(int messageId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Messages
+                        .Single(e => e.MessageId == messageId && e.MessageOwnerId == _messageUserId);
 
                 ctx.Messages.Remove(entity);
 

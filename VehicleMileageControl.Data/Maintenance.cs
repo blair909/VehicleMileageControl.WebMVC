@@ -29,5 +29,8 @@ namespace VehicleMileageControl.Data
         public int VehicleInformationId { get; set; }
         public string VehicleInformationStr { get; set; }
         public virtual VehicleInformation VehicleInformation { get; set; }
+        [ForeignKey(nameof(NoteId))]
+        public int NoteId { get; set; }
+        public virtual Note Note { get; set; }
     }
 }

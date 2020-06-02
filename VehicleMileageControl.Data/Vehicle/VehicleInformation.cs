@@ -28,6 +28,8 @@ namespace VehicleMileageControl.Data
         public int VehicleInformationId { get; set; }
         [Required]
         public Guid VehicleInformationOwnerId { get; set; }
+        
+        public string NewVehicleInformation { get; set; }
         public string OilAndFilterChange
         {
             get { return OilAndFilterChange; }
