@@ -9,7 +9,7 @@ namespace VehicleMileageControl.Model.MessageModel
 {
     public class MessageDetails
     {
-        [Key]
+        [Display(Name = "Message Id")]
         public int MessageId { get; set; }
         [Display(Name = "Regular Oil")]
         public string MessageOne

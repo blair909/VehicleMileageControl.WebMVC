@@ -184,6 +184,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MaintenanceController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\SavedPaymentInformationController.cs" />
     <Compile Include="Controllers\VehicleInformationController.cs" />
     <Compile Include="Global.asax.cs">
@@ -251,16 +252,13 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Maintenance\Create.cshtml" />
-    <Content Include="Views\Maintenance\Delete.cshtml" />
-    <Content Include="Views\Maintenance\Details.cshtml" />
-    <Content Include="Views\Maintenance\Edit.cshtml" />
     <Content Include="Views\Maintenance\Index.cshtml" />
     <Content Include="Views\SavedPaymentInformation\Create.cshtml" />
     <Content Include="Views\SavedPaymentInformation\Details.cshtml" />
     <Content Include="Views\SavedPaymentInformation\Delete.cshtml" />
     <Content Include="Views\SavedPaymentInformation\Edit.cshtml" />
     <Content Include="Views\SavedPaymentInformation\Index.cshtml" />
+    <Content Include="Views\Message\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
