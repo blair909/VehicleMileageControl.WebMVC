@@ -65,12 +65,12 @@ namespace VehicleMileageControl.Data
         public string MessageEleven
         {
             get { return MessageEleven; }
-            set { MessageEleven = "Every 40,000 miles. Around this mileage people normally change their transmission fluid and transmission filter. \n"; }
+            set { MessageEleven = "Every 40,000 miles. Around this mileage people normally change their transmission fluid and transmission filter. You could inspect your transmission systems as well. \n"; }
         }
         public string MessageTwelve
         {
             get { return MessageTwelve; }
-            set { MessageTwelve = "Every 45,000 miles. It's time to get your brake pads looked at and get a full brake system inspection. \n"; }
+            set { MessageTwelve = "Every 45,000 miles. It's time to get your brake pads looked at and get a full brake systems inspection. \n"; }
         }
         public string MessageThirteen
         {
@@ -90,7 +90,7 @@ namespace VehicleMileageControl.Data
         public string MessageSixteen
         {
             get { return MessageSixteen; }
-            set { MessageSixteen = "Every 60,000 miles. At your mileage people often get a complete suspension component inspection and complete steering system inspection. \n"; }
+            set { MessageSixteen = "Every 60,000 miles. At your mileage people often get a complete suspension component inspection and complete steering systems inspection. \n"; }
         }
         public string MessageSeventeen
         {

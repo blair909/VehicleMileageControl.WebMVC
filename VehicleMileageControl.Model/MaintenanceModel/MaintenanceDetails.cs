@@ -22,5 +22,9 @@ namespace VehicleMileageControl.Model
         public int MessageId { get; set; }
         [Display(Name = "Message")]
         public string MessageStr { get; set; }
+        [Display(Name = "Vehicle InformationId")]
+        public int VehicleInformationId { get; set; }
+        [Display(Name = "Vehicle Information")]
+        public string VehicleInformationStr { get; set; }
     }
 }

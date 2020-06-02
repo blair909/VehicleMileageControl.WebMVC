@@ -25,5 +25,9 @@ namespace VehicleMileageControl.Data
         public int MessageId { get; set; }
         public string MessageStr { get; set; }
         public virtual Message Message { get; set; }
+        [ForeignKey(nameof(VehicleInformationId))]
+        public int VehicleInformationId { get; set; }
+        public string VehicleInformationStr { get; set; }
+        public virtual VehicleInformation VehicleInformation { get; set; }
     }
 }

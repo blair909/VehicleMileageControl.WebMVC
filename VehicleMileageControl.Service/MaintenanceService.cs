@@ -19,6 +19,7 @@ namespace VehicleMileageControl.Service
         public string MessagePopulateForMileage(int mileage)
         {
             Message message = new Message();
+            VehicleInformation vehicle = new VehicleInformation();
             // Regular Oil and Filter
             for (int x = 1; x < 330; x++)
             {
@@ -26,7 +27,7 @@ namespace VehicleMileageControl.Service
                 int y = (3000 * x);
                 if (y <= mileage && mileage <= z)
                 {
-                    return message.MessageOne;
+                    return message.MessageOne + vehicle.OilAndFilterChange;
                 }
                 else if (y > mileage && mileage > z)
                 {
@@ -44,7 +45,7 @@ namespace VehicleMileageControl.Service
                 int y = (6000 * x);
                 if (y <= mileage && mileage <= z)
                 {
-                    return message.MessageTwo;
+                    return message.MessageTwo + vehicle.TireRotation;
                 }
                 else if (y > mileage && mileage > z)
                 {
@@ -62,7 +63,7 @@ namespace VehicleMileageControl.Service
                 int y = (7000 * x);
                 if (y <= mileage && mileage <= z)
                 {
-                    return message.MessageThree;
+                    return message.MessageThree + vehicle.OilAndFilterChange;
                 }
                 else if (y > mileage && mileage > z)
                 {
@@ -80,7 +81,7 @@ namespace VehicleMileageControl.Service
                 int y = (9000 * x);
                 if (y <= mileage && mileage <= z)
                 {
-                    return message.MessageFour;
+                    return message.MessageFour + vehicle.TireAlignment;
                 }
                 else if (y > mileage && mileage > z)
                 {
@@ -116,7 +117,7 @@ namespace VehicleMileageControl.Service
                 int y = (20000 * x);
                 if (y <= mileage && mileage <= z)
                 {
-                    return message.MessageSix + message.MessageSeven + message.MessageEight;
+                    return message.MessageSix + message.MessageSeven + message.MessageEight + vehicle.EngineAirFilterChange + vehicle.CabinAirFilterChange + vehicle.SparkPlugChange;
                 }
                 else if (y > mileage && mileage > z)
                 {
@@ -134,7 +135,7 @@ namespace VehicleMileageControl.Service
                 int y = (30000 * x);
                 if (y <= mileage && mileage <= z)
                 {
-                    return message.MessageNine;
+                    return message.MessageNine + vehicle.FuelFilterChange;
                 }
                 else if (y > mileage && mileage > z)
                 {
@@ -152,7 +153,7 @@ namespace VehicleMileageControl.Service
                 int y = (35000 * x);
                 if (y <= mileage && mileage <= z)
                 {
-                    return message.MessageTen;
+                    return message.MessageTen + vehicle.BrakeFluidChange;
                 }
                 else if (y > mileage && mileage > z)
                 {
@@ -170,7 +171,7 @@ namespace VehicleMileageControl.Service
                 int y = (40000 * x);
                 if (y <= mileage && mileage <= z)
                 {
-                    return message.MessageEleven + message.MessageTwentythree;
+                    return message.MessageEleven + message.MessageTwentythree + vehicle.TransmissionFluidAndFilterChange + vehicle.TransmissionSystemsInspection;
                 }
                 else if (y > mileage && mileage > z)
                 {
@@ -188,7 +189,7 @@ namespace VehicleMileageControl.Service
                 int y = (45000 * x);
                 if (y <= mileage && mileage <= z)
                 {
-                    return message.MessageTwelve;
+                    return message.MessageTwelve + vehicle.BrakePadChange;
                 }
                 else if (y > mileage && mileage > z)
                 {
@@ -206,7 +207,7 @@ namespace VehicleMileageControl.Service
                 int y = (50000 * x);
                 if (y <= mileage && mileage <= z)
                 {
-                    return message.MessageThirteen + message.MessageTwentyseven;
+                    return message.MessageThirteen + message.MessageTwentyseven + vehicle.BatteryChange;
                 }
                 else if (y > mileage && mileage > z)
                 {
@@ -224,7 +225,7 @@ namespace VehicleMileageControl.Service
                 int y = (55000 * x);
                 if (y <= mileage && mileage <= z)
                 {
-                    return message.MessageFourteen;
+                    return message.MessageFourteen + vehicle.EngineCoolantChange + vehicle.EngineCoolingSystemInspection;
                 }
                 else if (y > mileage && mileage > z)
                 {
@@ -242,7 +243,7 @@ namespace VehicleMileageControl.Service
                 int y = (60000 * x);
                 if (y <= mileage && mileage <= z)
                 {
-                    return message.MessageFifteen + message.MessageSixteen + message.MessageSeventeen + message.MessageEighteen + message.MessageTwentyfour;
+                    return message.MessageFifteen + message.MessageSixteen + message.MessageSeventeen + message.MessageEighteen + message.MessageTwentyfour + vehicle.StrutCheck + vehicle.BrakeRotorChange + vehicle.RadiatorHoseChange;
                 }
                 else if (y > mileage && mileage > z)
                 {
@@ -260,7 +261,7 @@ namespace VehicleMileageControl.Service
                 int y = (70000 * x);
                 if (y <= mileage && mileage <= z)
                 {
-                    return message.MessageNineteen + message.MessageTwenty + message.MessageTwentyeight;
+                    return message.MessageNineteen + message.MessageTwenty + message.MessageTwentyeight + vehicle.TimingBeltChange + vehicle.FuelTankPressureSensorCheck + vehicle.FuelSystemsInspection + vehicle.PowerSteeringPumpInspection;
                 }
                 else if (y > mileage && mileage > z)
                 {
@@ -278,7 +279,7 @@ namespace VehicleMileageControl.Service
                 int y = (80000 * x);
                 if (y <= mileage && mileage <= z)
                 {
-                    return message.MessageTwentyone;
+                    return message.MessageTwentyone + vehicle.SparkPlugChange;
                 }
                 else if (y > mileage && mileage > z)
                 {
@@ -296,7 +297,7 @@ namespace VehicleMileageControl.Service
                 int y = (100000 * x);
                 if (y <= mileage && mileage <= z)
                 {
-                    return message.MessageTwentytwo;
+                    return message.MessageTwentytwo + vehicle.DriveTrainInspection;
                 }
                 else if (y > mileage && mileage > z)
                 {
@@ -307,14 +308,14 @@ namespace VehicleMileageControl.Service
                     return message.MessageTwentyfive;
                 }
             }
-            // Alternator
+            // Alternator and Catalytic Converter
             for (int x = 1; x < 8; x++)
             {
                 int z = (125000 * x) + 1000;
                 int y = (125000 * x);
                 if (y <= mileage && mileage <= z)
                 {
-                    return message.MessageTwentysix;
+                    return message.MessageTwentysix + vehicle.AlternatorChange + vehicle.CatalyticConverterCheck;
                 }
                 else if (y > mileage && mileage > z)
                 {
@@ -332,6 +333,7 @@ namespace VehicleMileageControl.Service
             Maintenance maintenance = new Maintenance();
             int mileage = maintenance.OdomoterMileage;
             maintenance.MessageStr = MessagePopulateForMileage(mileage);
+            maintenance.VehicleInformationStr = MessagePopulateForMileage(mileage);
 
             var entity =
                 new Maintenance()
@@ -341,7 +343,9 @@ namespace VehicleMileageControl.Service
                     MaintenanceId = model.MaintenanceId,
                     CreatedUtc = DateTimeOffset.Now,
                     MessageId = model.MessageId,
-                    MessageStr = model.MessageStr
+                    MessageStr = model.MessageStr,
+                    VehicleInformationId = model.VehicleInformationId,
+                    VehicleInformationStr = model.VehicleInformationStr
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -374,6 +378,7 @@ namespace VehicleMileageControl.Service
             Maintenance maintenance = new Maintenance();
             int mileage = maintenance.OdomoterMileage;
             maintenance.MessageStr = MessagePopulateForMileage(mileage);
+            maintenance.VehicleInformationStr = MessagePopulateForMileage(mileage);
 
             using (var ctx = new ApplicationDbContext())
             {
@@ -389,7 +394,9 @@ namespace VehicleMileageControl.Service
                         CreatedUtc = entity.CreatedUtc,
                         ModifiedUtc = entity.ModifiedUtc,
                         MessageId = entity.MessageId,
-                        MessageStr = entity.MessageStr
+                        MessageStr = entity.MessageStr,
+                        VehicleInformationId = entity.VehicleInformationId,
+                        VehicleInformationStr = entity.VehicleInformationStr
                     };
             }
         }

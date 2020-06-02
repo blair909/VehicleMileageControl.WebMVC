@@ -69,9 +69,7 @@
     <Compile Include="SavedPaymentInformationModel\SavedPaymentInformationDetails.cs" />
     <Compile Include="SavedPaymentInformationModel\SavedPaymentInformationEdit.cs" />
     <Compile Include="SavedPaymentInformationModel\SavedPaymentInformationListItem.cs" />
-    <Compile Include="VehicleInformationModel\VehicleInformationCreate.cs" />
     <Compile Include="VehicleInformationModel\VehicleInformationDetails.cs" />
-    <Compile Include="VehicleInformationModel\VehicleInformationEdit.cs" />
     <Compile Include="VehicleInformationModel\VehicleInformationListItem.cs" />
   </ItemGroup>
   <ItemGroup>
