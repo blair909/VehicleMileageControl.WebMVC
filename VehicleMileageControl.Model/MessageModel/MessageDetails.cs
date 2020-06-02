@@ -75,25 +75,25 @@ namespace VehicleMileageControl.Model.MessageModel
         public string MessageEleven
         {
             get { return MessageEleven; }
-            set { MessageEleven = "Every 40,000 miles. Around this mileage people normally change their transmission fluid, transmission filter, and transmission pan gasket. \n"; }
+            set { MessageEleven = "Every 40,000 miles. Around this mileage people normally change their transmission fluid and transmission filter. \n"; }
         }
         [Display(Name = "Brake Pads")]
         public string MessageTwelve
         {
             get { return MessageTwelve; }
-            set { MessageTwelve = "Every 45000 miles. It's time to get your brake pads looked at. \n"; }
+            set { MessageTwelve = "Every 45,000 miles. It's time to get your brake pads looked at and get a full brake system inspection. \n"; }
         }
         [Display(Name = "Battery")]
         public string MessageThirteen
         {
             get { return MessageThirteen; }
-            set { MessageThirteen = "Every 50,000 miles. At your current mileage your battery may need to be replaced. \n"; }
+            set { MessageThirteen = "Every 50,000 miles. At your current mileage your battery may need to be replaced. You could also get an electrical/lighting systems inspection. \n"; }
         }
         [Display(Name = "Engine Coolant")]
         public string MessageFourteen
         {
             get { return MessageFourteen; }
-            set { MessageFourteen = "Every 55,000 miles. You could get your engine coolant levels assesed and/or changed. \n"; }
+            set { MessageFourteen = "Every 55,000 miles. You could get your engine coolant levels assesed and/or changed. You could also get a cooling systems inspection. \n"; }
         }
         [Display(Name = "HVAC Inspection")]
         public string MessageFifteen
@@ -123,7 +123,7 @@ namespace VehicleMileageControl.Model.MessageModel
         public string MessageNineteen
         {
             get { return MessageNineteen; }
-            set { MessageNineteen = "Every 70,000 miles. You should consider getting your timing belt checked out for signs of wear and tear.  If it snaps while the engine is running catastrophic engine failure could occur. \n"; }
+            set { MessageNineteen = "Every 70,000 miles. You should consider getting your timing belt checked out for signs of wear and tear. While you're at it you could get a full engine inspection/tune-up. \n"; }
         }
         [Display(Name = "Power Steering Fluid")]
         public string MessageTwenty
@@ -141,7 +141,7 @@ namespace VehicleMileageControl.Model.MessageModel
         public string MessageTwentytwo
         {
             get { return MessageTwentytwo; }
-            set { MessageTwentytwo = "Every 100,000 miles. At this high mileage people can check their rubber hoses and fixtures for signs of cracking and damage. \n"; }
+            set { MessageTwentytwo = "Every 100,000 miles. At this high mileage people can check their rubber hoses and fixtures for signs of cracking and damage. You could also get your drive-train systems inspected. \n"; }
         }
         [Display(Name = "Tires")]
         public string MessageTwentythree
@@ -171,6 +171,12 @@ namespace VehicleMileageControl.Model.MessageModel
         {
             get { return MessageTwentyseven; }
             set { MessageTwentyseven = "Every 50,000 miles. If you have an all-wheel drive train (AWD) it may be time to get a complete set of new tires. "; }
+        }
+        [Display(Name = "Exhuast and Emissions")]
+        public string MessageTwentyeight
+        {
+            get { return MessageTwentyeight; }
+            set { MessageTwentyeight = "Every 70,000 miles. You should get an exhaust/emissions systems inspection. "; }
         }
     }
 }

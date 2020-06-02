@@ -260,11 +260,11 @@
     <Content Include="Views\SavedPaymentInformation\Edit.cshtml" />
     <Content Include="Views\SavedPaymentInformation\Index.cshtml" />
     <Content Include="Views\Message\Index.cshtml" />
+    <Content Include="Views\Note\Index.cshtml" />
+    <Content Include="Views\VehicleInformation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Note\" />
-    <Folder Include="Views\VehicleInformation\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

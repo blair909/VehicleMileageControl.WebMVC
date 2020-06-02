@@ -163,7 +163,7 @@ namespace VehicleMileageControl.Service
                     return message.MessageTwentyfive;
                 }
             }
-            // Transmission Fluid, Pan Gasket, Filter, and Front Tires (FWD) or Rear Tires (RWD)
+            // Transmission Fluid, Filter, and Front Tires (FWD) or Rear Tires (RWD)
             for (int x = 1; x < 24; x++)
             {
                 int z = (40000 * x) + 1000;
@@ -181,7 +181,7 @@ namespace VehicleMileageControl.Service
                     return message.MessageTwentyfive;
                 }
             }
-            // Brake Pads
+            // Brake Pads and Brake Systems
             for (int x = 1; x < 22; x++)
             {
                 int z = (45000 * x) + 1000;
@@ -199,7 +199,7 @@ namespace VehicleMileageControl.Service
                     return message.MessageTwentyfive;
                 }
             }
-            // Battery and Tires (AWD)
+            // Battery, Tires (AWD), and Electrical/Lighting
             for (int x = 1; x < 19; x++)
             {
                 int z = (50000 * x) + 1000;
@@ -253,14 +253,14 @@ namespace VehicleMileageControl.Service
                     return message.MessageTwentyfive;
                 }
             }
-            // Timing Belt and Power Steering Fluid
+            // Timing Belt, Engine, Exhuast/Emissions, and Power Steering Fluid
             for (int x = 1; x < 14; x++)
             {
                 int z = (70000 * x) + 1000;
                 int y = (70000 * x);
                 if (y <= mileage && mileage <= z)
                 {
-                    return message.MessageNineteen + message.MessageTwenty;
+                    return message.MessageNineteen + message.MessageTwenty + message.MessageTwentyeight;
                 }
                 else if (y > mileage && mileage > z)
                 {
@@ -289,7 +289,7 @@ namespace VehicleMileageControl.Service
                     return message.MessageTwentyfive;
                 }
             }
-            // Rubber Cracks
+            // Rubber Cracks and DriveTrain
             for (int x = 1; x < 10; x++)
             {
                 int z = (100000 * x) + 1000;
