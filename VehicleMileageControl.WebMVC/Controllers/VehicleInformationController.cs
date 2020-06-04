@@ -9,6 +9,7 @@ using VehicleMileageControl.Model.VehicleInformation;
 
 namespace VehicleMileageControl.WebMVC.Controllers
 {
+    [Authorize]
     public class VehicleInformationController : Controller
     {
         private ApplicationDbContext _db = new ApplicationDbContext();

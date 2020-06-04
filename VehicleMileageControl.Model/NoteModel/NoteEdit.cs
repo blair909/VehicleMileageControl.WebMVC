@@ -19,5 +19,7 @@ namespace VehicleMileageControl.Model.NoteModel
         [MaxLength(5000, ErrorMessage = "There are too many characters in this field.")]
         [Display(Name = "Note Content")]
         public string NoteContent { get; set; }
+        [Display(Name = "Vehicle History Id")]
+        public int VehicleHistoryId { get; set; }
     }
 }

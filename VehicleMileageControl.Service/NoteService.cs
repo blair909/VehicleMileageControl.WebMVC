@@ -23,7 +23,8 @@ namespace VehicleMileageControl.Service
                     NoteOwnerId = _noteUserId,
                     NoteId = model.NoteId,
                     NoteTitle = model.NoteTitle,
-                    NoteContent = model.NoteContent
+                    NoteContent = model.NoteContent,
+                    VehicleHistoryId = model.VehicleHistoryId
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -64,7 +65,8 @@ namespace VehicleMileageControl.Service
                     {
                         NoteId = entity.NoteId,
                         NoteTitle = entity.NoteTitle,
-                        NoteContent = entity.NoteContent
+                        NoteContent = entity.NoteContent,
+                        VehicleHistoryId = entity.VehicleHistoryId
                     };
             }
         }
@@ -80,6 +82,7 @@ namespace VehicleMileageControl.Service
                 entity.NoteId = model.NoteId;
                 entity.NoteTitle = model.NoteTitle;
                 entity.NoteContent = model.NoteContent;
+                entity.VehicleHistoryId = model.VehicleHistoryId;
 
                 return ctx.SaveChanges() == 1;
             }

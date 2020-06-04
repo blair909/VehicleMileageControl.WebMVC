@@ -71,6 +71,10 @@
     <Compile Include="SavedPaymentInformationModel\SavedPaymentInformationDetails.cs" />
     <Compile Include="SavedPaymentInformationModel\SavedPaymentInformationEdit.cs" />
     <Compile Include="SavedPaymentInformationModel\SavedPaymentInformationListItem.cs" />
+    <Compile Include="VehicleHistoryModel\VehicleHistoryCreate.cs" />
+    <Compile Include="VehicleHistoryModel\VehicleHistoryDetails.cs" />
+    <Compile Include="VehicleHistoryModel\VehicleHistoryEdit.cs" />
+    <Compile Include="VehicleHistoryModel\VehicleHistoryListItem.cs" />
     <Compile Include="VehicleInformationModel\VehicleInformationCreate.cs" />
     <Compile Include="VehicleInformationModel\VehicleInformationDetails.cs" />
     <Compile Include="VehicleInformationModel\VehicleInformationEdit.cs" />

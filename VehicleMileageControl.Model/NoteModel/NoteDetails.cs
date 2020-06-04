@@ -15,5 +15,7 @@ namespace VehicleMileageControl.Model.NoteModel
         public string NoteTitle { get; set; }
         [Display(Name = "Note Content")]
         public string NoteContent { get; set; }
+        [Display(Name = "Vehicle History Id")]
+        public int VehicleHistoryId { get; set; }
     }
 }

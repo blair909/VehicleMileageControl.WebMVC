@@ -59,6 +59,7 @@
     <Compile Include="NoteService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SavedPaymentInformationService.cs" />
+    <Compile Include="VehicleHistoryService.cs" />
     <Compile Include="VehicleInformationService.cs" />
   </ItemGroup>
   <ItemGroup>

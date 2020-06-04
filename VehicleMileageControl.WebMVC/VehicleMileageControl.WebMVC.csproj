@@ -187,6 +187,7 @@
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\NoteController.cs" />
     <Compile Include="Controllers\SavedPaymentInformationController.cs" />
+    <Compile Include="Controllers\VehicleHistoryController.cs" />
     <Compile Include="Controllers\VehicleInformationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -262,6 +263,7 @@
     <Content Include="Views\Message\Index.cshtml" />
     <Content Include="Views\Note\Index.cshtml" />
     <Content Include="Views\VehicleInformation\Index.cshtml" />
+    <Content Include="Views\VehicleHistory\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
