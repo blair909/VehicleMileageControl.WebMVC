@@ -20,7 +20,7 @@ namespace VehicleMileageControl.Service
             var entity =
                 new VehicleHistory()
                 {
-                    VehicleHistoryOwnerId = model.VehicleHistoryOwnerId,
+                    VehicleHistoryOwnerId = _vehicleHistoryUserId,
                     VehicleHistoryId = model.VehicleHistoryId,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
@@ -49,7 +49,7 @@ namespace VehicleMileageControl.Service
                 return ctx.SaveChanges() == 1;
             }
         }
-        public IEnumerable<VehicleHistoryListItem> GetVehicleHistorys()
+        public IEnumerable<VehicleHistoryListItem> GetVehicleHistories()
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -61,7 +61,6 @@ namespace VehicleMileageControl.Service
                             e =>
                                 new VehicleHistoryListItem
                                 {
-                                    VehicleHistoryOwnerId = e.VehicleHistoryOwnerId,
                                     VehicleHistoryId = e.VehicleHistoryId,
                                     LastName = e.LastName,
                                     VehicleMake = e.VehicleMake,

@@ -1,204 +1,33 @@
-﻿@model IEnumerable<VehicleMileageControl.Data.VehicleInformation>
+﻿@model IEnumerable<VehicleMileageControl.Model.VehicleInformation.VehicleInformationListItem>
 
 @{
-    ViewBag.Title = "Vehicle Information";
+    ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("See All Vehicle Information", "Details")
+    @Html.ActionLink("Create New", "Create")
 </p>
-
 <table class="table">
     <tr>
         <th>
-            <img src="~/Views/VehicleInformation/Vehicle/Oil.jpg" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.OilAndFilterChange)
+            @Html.DisplayNameFor(model => model.VehicleInformationId)
         </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/TireRotation.png" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.TireRotation)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/TireAlignment.jpg" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.TireAlignment)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/EngineAirFilter.webp" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.EngineAirFilterChange)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/CabinAirFilter.webp" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.CabinAirFilterChange)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/FuelFilter.webp" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.FuelFilterChange)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/BrakeFluid.webp" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.BrakeFluidChange)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/TransmissionFluidAndFilter.jpg" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.TransmissionFluidAndFilterChange)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/Transmission.webp" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.TransmissionSystemsInspection)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/BrakePad.webp" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.BrakePadChange)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/Battery.jpg" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.BatteryChange)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/CoolingSystem.webp" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.EngineCoolingSystemInspection)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/EngineCoolant.webp" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.EngineCoolantChange)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/Strut.webp" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.StrutCheck)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/SteeringRack.webp" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.SteeringRackCheck)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/BrakeRotor.webp" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.BrakeRotorChange)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/RadiatorHose.webp" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.RadiatorHoseChange)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/TimingBelt.png" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.TimingBeltChange)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/FuelTankPressureSensor.webp" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.FuelTankPressureSensorCheck)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/FuelSystem.webp" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.FuelSystemsInspection)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/PowerSteeringPump.webp" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.PowerSteeringPumpInspection)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/SparkPlugs.webp" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.SparkPlugChange)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/DriveTrain.webp" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.DriveTrainInspection)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/Alternator.webp" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.AlternatorChange)
-        </th>
-        <th>
-            <img src="~/Views/VehicleInformation/Vehicle/CatalyticConverter.webp" height="600" width="900" />
-            @Html.DisplayNameFor(model => model.CatalyticConverterCheck)
-        </th>
-        <th>
-
-        </th>
+        <th></th>
     </tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.OilAndFilterChange)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TireRotation)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TireAlignment)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EngineAirFilterChange)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CabinAirFilterChange)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FuelFilterChange)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BrakeFluidChange)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TransmissionFluidAndFilterChange)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TransmissionSystemsInspection)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BrakePadChange)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BatteryChange)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EngineCoolingSystemInspection)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EngineCoolantChange)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StrutCheck)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SteeringRackCheck)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BrakeRotorChange)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RadiatorHoseChange)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TimingBeltChange)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FuelTankPressureSensorCheck)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FuelSystemsInspection)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PowerSteeringPumpInspection)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SparkPlugChange)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DriveTrainInspection)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AlternatorChange)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CatalyticConverterCheck)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.VehicleInformationId }) |
-                @Html.ActionLink("More Information", "Details", new { id = item.VehicleInformationId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.VehicleInformationId })
-            </td>
-        </tr>
-    }
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.VehicleInformationId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
 </table>

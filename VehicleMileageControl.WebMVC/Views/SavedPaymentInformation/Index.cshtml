@@ -1,53 +1,45 @@
-﻿@model IEnumerable<VehicleMileageControl.Data.SavedPaymentInformation>
+﻿@model IEnumerable<VehicleMileageControl.Model.SavedPaymentInformationListItem>
 
 @{
-    ViewBag.Title = "Saved Payment Information Index";
+    ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Save a Debit/Credit Card", "Create")
+    @Html.ActionLink("Create New", "Create")
 </p>
-
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SavedPaymentInformationId)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.CardNumber)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.FullName)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ExpirationDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CVV)
-        </th>
-        <th>
-
-        </th>
+        <th></th>
     </tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CardNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FullName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ExpirationDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CVV)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.SavedPaymentInformationId }) |
-                @Html.ActionLink("More Information", "Details", new { id = item.SavedPaymentInformationId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.SavedPaymentInformationId })
-            </td>
-        </tr>
-    }
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SavedPaymentInformationId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CardNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
 </table>

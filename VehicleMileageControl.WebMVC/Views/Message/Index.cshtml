@@ -1,195 +1,33 @@
-﻿@model IEnumerable<VehicleMileageControl.Data.Message>
+﻿@model IEnumerable<VehicleMileageControl.Model.MessageModel.MessageListItem>
 
 @{
-    ViewBag.Title = "Messages";
+    ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("See All Messages", "Details")
+    @Html.ActionLink("Create New", "Create")
 </p>
-
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.MessageOne)
+            @Html.DisplayNameFor(model => model.MessageId)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageTwo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageThree)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageFour)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageFive)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageSix)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageSeven)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageEight)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageNine)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageTen)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageEleven)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageTwelve)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageThirteen)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageFourteen)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageFifteen)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageSixteen)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageSeventeen)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageEighteen)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageNineteen)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageTwenty)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageTwentyone)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageTwentytwo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageTwentythree)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageTwentyfour)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageTwentyfive)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageTwentysix)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageTwentyseven)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MessageTwentyeight)
-        </th>
-        <th>
-
-        </th>
+        <th></th>
     </tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageOne)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageTwo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageThree)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageFour)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageFive)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageSix)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageSeven)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageEight)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageNine)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageTen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageEleven)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageTwelve)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageThirteen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageFourteen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageFifteen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageSixteen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageSeventeen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageEighteen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageNineteen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageTwenty)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageTwentyone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageTwentytwo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageTwentythree)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageTwentyfour)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageTwentyfive)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageTwentysix)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageTwentyseven)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MessageTwentyeight)
-            </td>
-            <td>
-                @Html.ActionLink("Delete", "Delete", new { id = item.MessageId })
-            </td>
-        </tr>
-    }
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MessageId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
 </table>

@@ -21,7 +21,7 @@ namespace VehicleMileageControl.WebMVC.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new VehicleHistoryService(userId);
-            var model = service.GetVehicleHistorys();
+            var model = service.GetVehicleHistories();
 
             return View(model);
         }

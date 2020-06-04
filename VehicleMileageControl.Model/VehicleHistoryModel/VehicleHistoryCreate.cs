@@ -9,7 +9,6 @@ namespace VehicleMileageControl.Model.VehicleHistoryModel
 {
     public class VehicleHistoryCreate
     {
-        public Guid VehicleHistoryOwnerId { get; set; }
         [Display(Name = "Vehicle History Id")]
         public int VehicleHistoryId { get; set; }
         [Required]
