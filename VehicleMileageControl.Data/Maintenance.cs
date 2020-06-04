@@ -21,16 +21,16 @@ namespace VehicleMileageControl.Data
         public DateTimeOffset CreatedUtc { get; set; }
         [Required]
         public DateTimeOffset? ModifiedUtc { get; set; }
-        [ForeignKey(nameof(MessageId))]
         public int MessageId { get; set; }
         public string MessageStr { get; set; }
+        [ForeignKey(nameof(MessageId))]
         public virtual Message Message { get; set; }
-        [ForeignKey(nameof(VehicleInformationId))]
         public int VehicleInformationId { get; set; }
         public string VehicleInformationStr { get; set; }
+        [ForeignKey(nameof(VehicleInformationId))]
         public virtual VehicleInformation VehicleInformation { get; set; }
-        [ForeignKey(nameof(NoteId))]
         public int NoteId { get; set; }
+        [ForeignKey(nameof(NoteId))]
         public virtual Note Note { get; set; }
     }
 }

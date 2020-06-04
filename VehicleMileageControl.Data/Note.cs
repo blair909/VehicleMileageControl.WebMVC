@@ -18,8 +18,8 @@ namespace VehicleMileageControl.Data
         public string NoteTitle { get; set; }
         [Required]
         public string NoteContent { get; set; }
-        [ForeignKey(nameof(VehicleHistoryId))]
         public int VehicleHistoryId { get; set; }
+        [ForeignKey(nameof(VehicleHistoryId))]
         public virtual VehicleHistory VehicleHistory { get; set; }
     }
 }

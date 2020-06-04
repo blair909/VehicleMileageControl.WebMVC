@@ -1,0 +1,186 @@
+﻿@model VehicleMileageControl.Model.VehicleHistoryModel.VehicleHistoryDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VehicleHistoryDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicleHistoryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VehicleHistoryId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicleMake)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VehicleMake)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicleModel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VehicleModel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicleYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VehicleYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LicenseNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LicenseNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VinNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VinNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OdometerMileage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OdometerMileage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceThree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceThree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceFour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceFour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceFive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceFive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceOneCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceOneCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceTwoCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceTwoCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceThreeCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceThreeCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceFourCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceFourCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceFiveCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceFiveCost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

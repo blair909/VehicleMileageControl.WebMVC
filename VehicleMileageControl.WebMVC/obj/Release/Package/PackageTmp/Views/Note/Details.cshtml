@@ -1,0 +1,50 @@
+﻿@model VehicleMileageControl.Model.NoteModel.NoteDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NoteDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NoteId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoteId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoteTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoteTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoteContent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoteContent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicleHistoryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VehicleHistoryId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

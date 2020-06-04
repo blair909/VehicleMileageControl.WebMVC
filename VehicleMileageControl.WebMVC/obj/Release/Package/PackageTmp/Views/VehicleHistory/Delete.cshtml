@@ -1,0 +1,192 @@
+﻿@model VehicleMileageControl.Model.VehicleHistoryModel.VehicleHistoryDetails
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>VehicleHistoryDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicleHistoryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VehicleHistoryId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicleMake)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VehicleMake)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicleModel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VehicleModel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicleYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VehicleYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LicenseNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LicenseNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VinNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VinNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OdometerMileage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OdometerMileage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceThree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceThree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceFour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceFour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceFive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceFive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceOneCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceOneCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceTwoCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceTwoCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceThreeCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceThreeCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceFourCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceFourCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceFiveCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceFiveCost)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

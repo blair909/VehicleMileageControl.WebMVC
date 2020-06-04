@@ -33,3 +33,5 @@ C:\Users\Carson Blair\Source\Repos\VehicleMileageControl.WebMVC\VehicleMileageCo
 C:\Users\Carson Blair\Source\Repos\VehicleMileageControl.WebMVC\VehicleMileageControl.Data\obj\Debug\VehicleMileageControl.Data.csproj.CopyComplete
 C:\Users\Carson Blair\Source\Repos\VehicleMileageControl.WebMVC\VehicleMileageControl.Data\obj\Debug\VehicleMileageControl.Data.dll
 C:\Users\Carson Blair\Source\Repos\VehicleMileageControl.WebMVC\VehicleMileageControl.Data\obj\Debug\VehicleMileageControl.Data.pdb
+C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.Data\obj\Debug\VehicleMileageControl.Data.Migrations.ForeignKeyDBFix.resources
+C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.Data\obj\Debug\VehicleMileageControl.Data.csproj.GenerateResource.cache
