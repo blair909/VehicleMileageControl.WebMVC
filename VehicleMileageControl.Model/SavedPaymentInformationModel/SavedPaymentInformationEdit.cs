@@ -23,7 +23,7 @@ namespace VehicleMileageControl.Model
         [Display(Name = "Expiration Date")]
         public DateTime ExpirationDate
         {
-            get;
+            get { return ExpirationDate; }
             set
             {
                 ExpirationDate.ToString("MM/yyyy");
