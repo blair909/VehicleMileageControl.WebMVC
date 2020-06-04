@@ -225,6 +225,7 @@
     <Content Include="Views\VehicleInformation\Vehicle\TimingBelt.png" />
     <Content Include="Views\VehicleInformation\Vehicle\TireAlignment.jpg" />
     <Content Include="Views\VehicleInformation\Vehicle\TireRotation.png" />
+    <Content Include="Views\VehicleInformation\Vehicle\TransmissionFluidAndFilter.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -303,6 +304,7 @@
     <Content Include="Views\VehicleInformation\Vehicle\Transmission.webp" />
     <Content Include="Views\VehicleInformation\Details.cshtml" />
     <Content Include="Views\VehicleInformation\Delete.cshtml" />
+    <Content Include="Views\VehicleInformation\Vehicle\EngineCoolant.webp" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
