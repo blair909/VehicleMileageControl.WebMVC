@@ -118,3 +118,6 @@ C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageCo
 C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.WebMVC\obj\Debug\VehicleMileageControl.WebMVC.csproj.CopyComplete
 C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.WebMVC\obj\Debug\VehicleMileageControl.WebMVC.dll
 C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.WebMVC\obj\Debug\VehicleMileageControl.WebMVC.pdb
+C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.WebMVC\bin\VehicleMileageControl.Service.dll
+C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.WebMVC\bin\VehicleMileageControl.Service.pdb
+C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.WebMVC\bin\VehicleMileageControl.Service.dll.config

@@ -13,12 +13,6 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.VehicleInformationOwnerId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VehicleInformationId)
-        </th>
-        <th>
             <img src="~/Views/VehicleInformation/Vehicle/Oil.jpg" height="600" width="900" />
             @Html.DisplayNameFor(model => model.OilAndFilterChange)
         </th>
@@ -125,12 +119,6 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.VehicleInformationOwnerId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.VehicleInformationId)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.OilAndFilterChange)
             </td>

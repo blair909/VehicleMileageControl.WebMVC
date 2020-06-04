@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using VehicleMileageControl.Data;
 using VehicleMileageControl.Model.NoteModel;
+using VehicleMileageControl.Service;
 
 namespace VehicleMileageControl.WebMVC.Controllers
 {
@@ -17,7 +19,10 @@ namespace VehicleMileageControl.WebMVC.Controllers
         // GET: Note
         public ActionResult Index()
         {
-            var model = new NoteListItem[0];
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new NoteService(userId);
+            var model = service.GetNotes();
+
             return View(model);
         }
 
@@ -31,15 +36,19 @@ namespace VehicleMileageControl.WebMVC.Controllers
         // POST: Note
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Note note)
+        public ActionResult Create(NoteCreate model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _db.Notes.Add(note);
-                _db.SaveChanges();
-                return RedirectToAction("Index");
+                return View(model);
             }
-            return View(note);
+
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new NoteService(userId);
+
+            service.CreateNote(model);
+
+            return RedirectToAction("Index");
         }
 
         // GET: Delete

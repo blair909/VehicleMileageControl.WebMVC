@@ -308,6 +308,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -330,6 +331,10 @@
     <ProjectReference Include="..\VehicleMileageControl.Model\VehicleMileageControl.Model.csproj">
       <Project>{A7C3CDBB-669A-4ADC-A862-A5D38A351689}</Project>
       <Name>VehicleMileageControl.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VehicleMileageControl.Service\VehicleMileageControl.Service.csproj">
+      <Project>{F0793716-F3B3-4E01-A31D-1A479D605FD9}</Project>
+      <Name>VehicleMileageControl.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

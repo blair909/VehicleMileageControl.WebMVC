@@ -1,4 +1,4 @@
-﻿@model IEnumerable<VehicleMileageControl.Data.Maintenance>
+﻿@model IEnumerable<VehicleMileageControl.Model.MaintenanceDetails>
 
 @{
     ViewBag.Title = "Maintenance Notes";
@@ -12,12 +12,6 @@
 
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.MaintenanceOwnerId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MaintenanceId)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.OdomoterMileage)
         </th>
@@ -49,12 +43,6 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaintenanceOwnerId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaintenanceId)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.OdomoterMileage)
             </td>

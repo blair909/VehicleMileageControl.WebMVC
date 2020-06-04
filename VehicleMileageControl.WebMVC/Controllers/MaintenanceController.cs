@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using VehicleMileageControl.Data;
 using VehicleMileageControl.Model;
+using VehicleMileageControl.Service;
 
 namespace VehicleMileageControl.WebMVC.Controllers
 {
@@ -15,11 +17,16 @@ namespace VehicleMileageControl.WebMVC.Controllers
     {
         private ApplicationDbContext _db = new ApplicationDbContext();
         // GET: Maintenance
-        public ActionResult Index()
+        public ActionResult Index(int id)
         {
-            var model = new MaintenanceListItem[0];
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new MaintenanceService(userId);
+            var model = service.GetMaintenanceById(id);
+
             return View(model);
         }
+        //The model item passed into the dictionary is of type 'VehicleMileageControl.Model.MaintenanceListItem[]', but this dictionary requires a model
+        // item of type 'System.Collections.Generic.IEnumerable`1[VehicleMileageControl.Data.Maintenance]'.
 
         // GET: Maintenance
         [HttpGet]
@@ -31,15 +38,19 @@ namespace VehicleMileageControl.WebMVC.Controllers
         // POST: Maintenance
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Maintenance maintenance)
+        public ActionResult Create(MaintenanceCreate model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _db.Maintenances.Add(maintenance);
-                _db.SaveChanges();
-                return RedirectToAction("Index");
+                return View(model);
             }
-            return View(maintenance);
+
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new MaintenanceService(userId);
+
+            service.CreateMaintenance(model);
+
+            return RedirectToAction("Index");
         }
 
         // GET: Delete

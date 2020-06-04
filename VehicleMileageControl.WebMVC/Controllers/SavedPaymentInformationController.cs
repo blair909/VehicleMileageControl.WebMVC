@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using VehicleMileageControl.Data;
 using VehicleMileageControl.Model;
+using VehicleMileageControl.Service;
 
 namespace VehicleMileageControl.WebMVC.Controllers
 {
@@ -17,7 +19,10 @@ namespace VehicleMileageControl.WebMVC.Controllers
         // GET: SavedPaymentInformation
         public ActionResult Index()
         {
-            var model = new SavedPaymentInformationListItem[0];
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new SavedPaymentInformationService(userId);
+            var model = service.GetPayment();
+
             return View(model);
         }
 
@@ -31,15 +36,19 @@ namespace VehicleMileageControl.WebMVC.Controllers
         // POST: SavedPaymentInformation
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(SavedPaymentInformation savedPaymentInformation)
+        public ActionResult Create(SavedPaymentInformationCreate model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _db.SavedPaymentInformations.Add(savedPaymentInformation);
-                _db.SaveChanges();
-                return RedirectToAction("Index");
+                return View(model);
             }
-            return View(savedPaymentInformation);
+
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new SavedPaymentInformationService(userId);
+
+            service.CreatePayment(model);
+
+            return RedirectToAction("Index");
         }
 
         // GET: Delete

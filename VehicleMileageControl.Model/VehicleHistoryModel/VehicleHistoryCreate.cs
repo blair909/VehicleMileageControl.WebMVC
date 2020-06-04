@@ -17,11 +17,7 @@ namespace VehicleMileageControl.Model.VehicleHistoryModel
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
         [Display(Name = "Full Name")]
-        public string FullName
-        {
-            get { return FullName; }
-            set { FullName = $"{FirstName} {LastName}"; }
-        }
+        public string FullName { get; set; }
         [Display(Name = "Vehicle Make")]
         public string VehicleMake { get; set; }
         [Display(Name = "Vehicle Model")]
@@ -33,14 +29,7 @@ namespace VehicleMileageControl.Model.VehicleHistoryModel
         [Display(Name = "VIN Number")]
         public string VinNo { get; set; }
         [Display(Name = "Date Serviced")]
-        public DateTime ServiceDate
-        {
-            get { return ServiceDate; }
-            set
-            {
-                ServiceDate.ToString("MM/dd/yyyy");
-            }
-        }
+        public DateTime ServiceDate { get; set; }
         [Display(Name = "Odometer Mileage")]
         public int OdometerMileage { get; set; }
         [Display(Name = "Service One")]
@@ -54,49 +43,14 @@ namespace VehicleMileageControl.Model.VehicleHistoryModel
         [Display(Name = "Service Five")]
         public string ServiceFive { get; set; }
         [Display(Name = "Service One Cost")]
-        public decimal ServiceOneCost
-        {
-            get { return ServiceOneCost; }
-            set
-            {
-                ServiceOneCost.ToString($"${ServiceOneCost}");
-            }
-        }
+        public decimal ServiceOneCost { get; set; }
         [Display(Name = "Service Two Cost")]
-        public decimal ServiceTwoCost
-        {
-            get { return ServiceTwoCost; }
-            set
-            {
-                ServiceTwoCost.ToString($"${ServiceTwoCost}");
-            }
-        }
+        public decimal ServiceTwoCost { get; set; }
         [Display(Name = "Service Three Cost")]
-        public decimal ServiceThreeCost
-        {
-            get { return ServiceThreeCost; }
-            set
-            {
-                ServiceThreeCost.ToString($"${ServiceThreeCost}");
-            }
-        }
+        public decimal ServiceThreeCost { get; set; }
         [Display(Name = "Service Four Cost")]
-        public decimal ServiceFourCost
-        {
-            get { return ServiceFourCost; }
-            set
-            {
-                ServiceFourCost.ToString($"${ServiceFourCost}");
-            }
-        }
+        public decimal ServiceFourCost { get; set; }
         [Display(Name = "Service Five Cost")]
-        public decimal ServiceFiveCost
-        {
-            get { return ServiceFiveCost; }
-            set
-            {
-                ServiceFiveCost.ToString($"${ServiceFiveCost}");
-            }
-        }
+        public decimal ServiceFiveCost { get; set; }
     }
 }

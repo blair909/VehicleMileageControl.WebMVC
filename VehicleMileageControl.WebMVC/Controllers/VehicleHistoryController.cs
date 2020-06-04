@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using VehicleMileageControl.Data;
 using VehicleMileageControl.Model.VehicleHistoryModel;
+using VehicleMileageControl.Service;
 
 namespace VehicleMileageControl.WebMVC.Controllers
 {
@@ -17,7 +19,10 @@ namespace VehicleMileageControl.WebMVC.Controllers
         // GET: VehicleHistory
         public ActionResult Index()
         {
-            var model = new VehicleHistoryListItem[0];
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new VehicleHistoryService(userId);
+            var model = service.GetVehicleHistorys();
+
             return View(model);
         }
 
@@ -31,15 +36,19 @@ namespace VehicleMileageControl.WebMVC.Controllers
         // POST: VehicleHistory
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(VehicleHistory vehicleHistory)
+        public ActionResult Create(VehicleHistoryCreate model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _db.VehicleHistorys.Add(vehicleHistory);
-                _db.SaveChanges();
-                return RedirectToAction("Index");
+                return View(model);
             }
-            return View(vehicleHistory);
+
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new VehicleHistoryService(userId);
+
+            service.CreateVehicleHistory(model);
+
+            return RedirectToAction("Index");
         }
 
         // GET: Delete

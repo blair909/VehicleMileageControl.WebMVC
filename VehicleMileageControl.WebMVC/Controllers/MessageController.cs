@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -6,6 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using VehicleMileageControl.Data;
 using VehicleMileageControl.Model.MessageModel;
+using VehicleMileageControl.Service;
 
 namespace VehicleMileageControl.WebMVC.Controllers
 {
@@ -16,7 +18,10 @@ namespace VehicleMileageControl.WebMVC.Controllers
         // GET: Message
         public ActionResult Index()
         {
-            var model = new MessageListItem[0];
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new MessageService(userId);
+            var model = service.GetMessages();
+
             return View(model);
         }
         // GET: Delete

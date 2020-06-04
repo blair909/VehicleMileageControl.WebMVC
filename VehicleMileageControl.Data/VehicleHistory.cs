@@ -18,12 +18,6 @@ namespace VehicleMileageControl.Data
         [Required]
         public string LastName { get; set; }
         [Required]
-        public string FullName
-        {
-            get { return FullName; }
-            set { FullName = $"{FirstName} {LastName}"; }
-        }
-        [Required]
         public string VehicleMake { get; set; }
         [Required]
         public string VehicleModel { get; set; }
@@ -34,14 +28,7 @@ namespace VehicleMileageControl.Data
         [Required]
         public string VinNo { get; set; }
         [Required]
-        public DateTime ServiceDate
-        {
-            get { return ServiceDate; }
-            set
-            {
-                ServiceDate.ToString("MM/dd/yyyy");
-            }
-        }
+        public DateTime ServiceDate { get; set; }
         [Required]
         public int OdometerMileage { get; set; }
         [Required]
@@ -51,45 +38,10 @@ namespace VehicleMileageControl.Data
         public string ServiceFour { get; set; }
         public string ServiceFive { get; set; }
         [Required]
-        public decimal ServiceOneCost
-        {
-            get { return ServiceOneCost; }
-            set
-            {
-                ServiceOneCost.ToString($"${ServiceOneCost}");
-            }
-        }
-        public decimal ServiceTwoCost
-        {
-            get { return ServiceTwoCost; }
-            set
-            {
-                ServiceTwoCost.ToString($"${ServiceTwoCost}");
-            }
-        }
-        public decimal ServiceThreeCost
-        {
-            get { return ServiceThreeCost; }
-            set
-            {
-                ServiceThreeCost.ToString($"${ServiceThreeCost}");
-            }
-        }
-        public decimal ServiceFourCost
-        {
-            get { return ServiceFourCost; }
-            set
-            {
-                ServiceFourCost.ToString($"${ServiceFourCost}");
-            }
-        }
-        public decimal ServiceFiveCost
-        {
-            get { return ServiceFiveCost; }
-            set
-            {
-                ServiceFiveCost.ToString($"${ServiceFiveCost}");
-            }
-        }
+        public decimal ServiceOneCost { get; set; }
+        public decimal ServiceTwoCost { get; set; }
+        public decimal ServiceThreeCost { get; set; }
+        public decimal ServiceFourCost { get; set; }
+        public decimal ServiceFiveCost { get; set; }
     }
 }
