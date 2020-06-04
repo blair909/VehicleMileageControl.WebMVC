@@ -1,0 +1,84 @@
+﻿/*Common elements*/
+body {
+    font-size: 67.5%;
+    font-family: Tahoma, Geneva, sans-serif;
+    background: rgb(168, 164, 231) url(https://wallpaperaccess.com/full/1567665.png) no-repeat fixed top center;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+color: rgb(105, 155, 13);
+font-size: 2.0em;
+margin: 0.5em 0 0.5em 0;
+padding: 0;
+}
+
+h2 {
+color: rgb(105, 155, 13);
+font-size: 1.7em;
+padding: 0px;
+margin: 0.5em 0 0.35em 0;
+}
+
+p {
+font-size: 1.2em;
+line-height: 1.4em;
+color: rgb(239, 255, 93);
+padding: 0px;
+margin: 0px 0.5em 0.75em 0px;
+}
+
+ol {
+font-size: 1.2em;
+margin: 0 0 0 1.0em;
+padding: 0 0 0 1.0em;
+color: whitesmoke;
+}
+
+a, a:visited {
+color: whitesmoke;
+}
+
+a:hover {
+color: rgb(239, 255, 93);
+}
+
+hr {
+padding: 0;
+margin: 1.5em 1.5em 0.75em 0.5em;
+}
+
+/*Header*/
+header {
+    padding: 2.5em 0 0.5em;
+    margin: 0 0 2.0em;
+    background: rgb(42, 94, 66) url(https://www.sealcoating-joe.com/wp-content/uploads/2011/11/JOES-Website-Background-light-grey.jpg) center 0px;
+}
+
+header h1 {
+font-family: "Times New Roman", Times, serif;
+color: rgba(7, 22, 70, 0.8);
+font-size: 7.5em;
+letter-spacing: -0.025em;
+margin: 0;
+/*text-shadow: 1px 2px 0 #bd8437;  offset-x | offset-y | blur-radius | color */
+}
+
+header h2 {
+font-weight: 300;
+font-size: 3.8em;
+color: rgb(42, 94, 66);
+margin: 0 0 0 1.0em;
+text-transform: uppercase;
+letter-spacing: 0.05em;
+}
+
+/*Database Tables*/
+body #one {
+font-size: 67.5%;
+font-family: Tahoma, Geneva, sans-serif;
+background: url(https://wallpaperaccess.com/full/123993.jpg) no-repeat fixed top center;
+padding: 0;
+margin: 0;
+}

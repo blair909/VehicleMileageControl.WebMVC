@@ -220,6 +220,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Shared\main.css" />
     <Content Include="Views\VehicleInformation\Vehicle\Battery.jpg" />
     <Content Include="Views\VehicleInformation\Vehicle\Oil.jpg" />
     <Content Include="Views\VehicleInformation\Vehicle\TimingBelt.png" />
@@ -305,6 +306,10 @@
     <Content Include="Views\VehicleInformation\Details.cshtml" />
     <Content Include="Views\VehicleInformation\Delete.cshtml" />
     <Content Include="Views\VehicleInformation\Vehicle\EngineCoolant.webp" />
+    <Content Include="Views\Message\Create.cshtml" />
+    <Content Include="Views\Message\Edit.cshtml" />
+    <Content Include="Views\VehicleInformation\Create.cshtml" />
+    <Content Include="Views\VehicleInformation\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

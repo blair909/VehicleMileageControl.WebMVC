@@ -83,7 +83,6 @@ namespace VehicleMileageControl.Service
                 return
                     new VehicleHistoryDetails
                     {
-                        VehicleHistoryOwnerId = entity.VehicleHistoryOwnerId,
                         VehicleHistoryId = entity.VehicleHistoryId,
                         FirstName = entity.FirstName,
                         LastName = entity.LastName,
@@ -116,7 +115,6 @@ namespace VehicleMileageControl.Service
                         .VehicleHistorys
                         .Single(e => e.VehicleHistoryId == model.VehicleHistoryId && e.VehicleHistoryOwnerId == _vehicleHistoryUserId);
 
-                entity.VehicleHistoryOwnerId = model.VehicleHistoryOwnerId;
                 entity.VehicleHistoryId = model.VehicleHistoryId;
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;

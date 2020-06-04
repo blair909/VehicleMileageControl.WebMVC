@@ -99,6 +99,14 @@
     <Compile Include="Migrations\202006040852050_derp.Designer.cs">
       <DependentUpon>202006040852050_derp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006041443038_why.cs" />
+    <Compile Include="Migrations\202006041443038_why.Designer.cs">
+      <DependentUpon>202006041443038_why.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006041455429_nono.cs" />
+    <Compile Include="Migrations\202006041455429_nono.Designer.cs">
+      <DependentUpon>202006041455429_nono.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Note.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -119,6 +127,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006040852050_derp.resx">
       <DependentUpon>202006040852050_derp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006041443038_why.resx">
+      <DependentUpon>202006041443038_why.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006041455429_nono.resx">
+      <DependentUpon>202006041455429_nono.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
