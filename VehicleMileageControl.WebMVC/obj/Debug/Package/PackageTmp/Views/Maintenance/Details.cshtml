@@ -1,0 +1,90 @@
+﻿@model VehicleMileageControl.Data.Maintenance
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MaintenanceDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaintenanceId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaintenanceId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OdomoterMileage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OdomoterMileage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedUtc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedUtc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MessageId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MessageId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MessageStr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MessageStr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicleInformationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VehicleInformationId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicleInformationStr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VehicleInformationStr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoteId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoteId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
