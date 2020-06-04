@@ -196,6 +196,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Views\VehicleInformation\Vehicle\VehicleInformation.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -220,6 +221,11 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\VehicleInformation\Vehicle\Battery.jpg" />
+    <Content Include="Views\VehicleInformation\Vehicle\Oil.jpg" />
+    <Content Include="Views\VehicleInformation\Vehicle\TimingBelt.png" />
+    <Content Include="Views\VehicleInformation\Vehicle\TireAlignment.jpg" />
+    <Content Include="Views\VehicleInformation\Vehicle\TireRotation.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -264,6 +270,40 @@
     <Content Include="Views\Note\Index.cshtml" />
     <Content Include="Views\VehicleInformation\Index.cshtml" />
     <Content Include="Views\VehicleHistory\Index.cshtml" />
+    <Content Include="Views\Maintenance\Create.cshtml" />
+    <Content Include="Views\Maintenance\Delete.cshtml" />
+    <Content Include="Views\Maintenance\Edit.cshtml" />
+    <Content Include="Views\Maintenance\Details.cshtml" />
+    <Content Include="Views\Message\Details.cshtml" />
+    <Content Include="Views\Message\Delete.cshtml" />
+    <Content Include="Views\Note\Delete.cshtml" />
+    <Content Include="Views\Note\Details.cshtml" />
+    <Content Include="Views\Note\Create.cshtml" />
+    <Content Include="Views\Note\Edit.cshtml" />
+    <Content Include="Views\VehicleHistory\Create.cshtml" />
+    <Content Include="Views\VehicleHistory\Delete.cshtml" />
+    <Content Include="Views\VehicleHistory\Details.cshtml" />
+    <Content Include="Views\VehicleHistory\Edit.cshtml" />
+    <Content Include="Views\VehicleInformation\Vehicle\Alternator.webp" />
+    <Content Include="Views\VehicleInformation\Vehicle\BrakeFluid.webp" />
+    <Content Include="Views\VehicleInformation\Vehicle\BrakePad.webp" />
+    <Content Include="Views\VehicleInformation\Vehicle\BrakeRotor.webp" />
+    <Content Include="Views\VehicleInformation\Vehicle\CabinAirFilter.webp" />
+    <Content Include="Views\VehicleInformation\Vehicle\CatalyticConverter.webp" />
+    <Content Include="Views\VehicleInformation\Vehicle\CoolingSystem.webp" />
+    <Content Include="Views\VehicleInformation\Vehicle\DriveTrain.webp" />
+    <Content Include="Views\VehicleInformation\Vehicle\EngineAirFilter.webp" />
+    <Content Include="Views\VehicleInformation\Vehicle\FuelFilter.webp" />
+    <Content Include="Views\VehicleInformation\Vehicle\FuelSystem.webp" />
+    <Content Include="Views\VehicleInformation\Vehicle\FuelTankPressureSensor.webp" />
+    <Content Include="Views\VehicleInformation\Vehicle\PowerSteeringPump.webp" />
+    <Content Include="Views\VehicleInformation\Vehicle\RadiatorHose.webp" />
+    <Content Include="Views\VehicleInformation\Vehicle\SparkPlugs.webp" />
+    <Content Include="Views\VehicleInformation\Vehicle\SteeringRack.webp" />
+    <Content Include="Views\VehicleInformation\Vehicle\Strut.webp" />
+    <Content Include="Views\VehicleInformation\Vehicle\Transmission.webp" />
+    <Content Include="Views\VehicleInformation\Details.cshtml" />
+    <Content Include="Views\VehicleInformation\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -91,36 +91,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SavedPaymentInformation.cs" />
     <Compile Include="VehicleHistory.cs" />
-    <Compile Include="Vehicle\VehicleInformation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="Vehicle\Alternator.webp" />
-    <None Include="Vehicle\BrakeFluid.webp" />
-    <None Include="Vehicle\BrakePad.webp" />
-    <None Include="Vehicle\BrakeRotor.webp" />
-    <None Include="Vehicle\CabinAirFilter.webp" />
-    <None Include="Vehicle\CatalyticConverter.webp" />
-    <None Include="Vehicle\CoolingSystem.webp" />
-    <None Include="Vehicle\DriveTrain.webp" />
-    <None Include="Vehicle\EngineAirFilter.webp" />
-    <None Include="Vehicle\FuelFilter.webp" />
-    <None Include="Vehicle\FuelSystem.webp" />
-    <None Include="Vehicle\FuelTankPressureSensor.webp" />
-    <None Include="Vehicle\PowerSteeringPump.webp" />
-    <None Include="Vehicle\RadiatorHose.webp" />
-    <None Include="Vehicle\SparkPlugs.webp" />
-    <None Include="Vehicle\SteeringRack.webp" />
-    <None Include="Vehicle\Strut.webp" />
-    <None Include="Vehicle\Transmission.webp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Vehicle\Battery.jpg" />
-    <Content Include="Vehicle\Oil.jpg" />
-    <Content Include="Vehicle\TimingBelt.png" />
-    <Content Include="Vehicle\TireAlignment.jpg" />
-    <Content Include="Vehicle\TireRotation.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

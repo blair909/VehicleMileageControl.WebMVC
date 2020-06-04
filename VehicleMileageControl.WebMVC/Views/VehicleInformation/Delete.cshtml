@@ -1,0 +1,240 @@
+﻿@model VehicleMileageControl.Model.VehicleInformation.VehicleInformationDetails
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>VehicleInformationDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicleInformationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VehicleInformationId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicleInformationOwnerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VehicleInformationOwnerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OilAndFilterChange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OilAndFilterChange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TireRotation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TireRotation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TireAlignment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TireAlignment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EngineAirFilterChange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EngineAirFilterChange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CabinAirFilterChange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CabinAirFilterChange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FuelFilterChange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FuelFilterChange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BrakeFluidChange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrakeFluidChange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TransmissionFluidAndFilterChange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransmissionFluidAndFilterChange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TransmissionSystemsInspection)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransmissionSystemsInspection)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BrakePadChange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrakePadChange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BatteryChange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BatteryChange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EngineCoolingSystemInspection)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EngineCoolingSystemInspection)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EngineCoolantChange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EngineCoolantChange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StrutCheck)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StrutCheck)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SteeringRackCheck)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SteeringRackCheck)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BrakeRotorChange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrakeRotorChange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RadiatorHoseChange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RadiatorHoseChange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimingBeltChange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimingBeltChange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FuelTankPressureSensorCheck)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FuelTankPressureSensorCheck)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FuelSystemsInspection)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FuelSystemsInspection)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PowerSteeringPumpInspection)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PowerSteeringPumpInspection)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SparkPlugChange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SparkPlugChange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DriveTrainInspection)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DriveTrainInspection)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AlternatorChange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlternatorChange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CatalyticConverterCheck)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CatalyticConverterCheck)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
