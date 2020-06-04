@@ -1,7 +1,155 @@
-﻿
+﻿@model IEnumerable<VehicleMileageControl.Data.VehicleHistory>
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Vehicle Histories";
 }
 
 <h2>Index</h2>
 
+<p>
+    @Html.ActionLink("Make a Vehicle History", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleHistoryOwnerId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleHistoryId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleMake)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleModel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LicenseNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OdometerMileage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceOne)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceOneCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceTwo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceTwoCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceThree)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceThreeCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceFour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceFourCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceFive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceFiveCost)
+        </th>
+        <th>
+
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.VehicleHistoryOwnerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VehicleHistoryId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VehicleMake)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VehicleModel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VehicleYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LicenseNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OdometerMileage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceOne)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceOneCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceTwo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceTwoCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceThree)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceThreeCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceFour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceFourCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceFive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceFiveCost)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.VehicleHistoryId }) |
+                @Html.ActionLink("More Information", "Details", new { id = item.VehicleHistoryId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.VehicleHistoryId })
+            </td>
+        </tr>
+    }
+</table>
