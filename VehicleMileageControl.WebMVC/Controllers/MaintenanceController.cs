@@ -17,11 +17,11 @@ namespace VehicleMileageControl.WebMVC.Controllers
     {
         private ApplicationDbContext _db = new ApplicationDbContext();
         // GET: Maintenance
-        public ActionResult Index(int id)
+        public ActionResult Index()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new MaintenanceService(userId);
-            var model = service.GetMaintenanceById(id);
+            var model = service.GetMaintenances();
 
             return View(model);
         }

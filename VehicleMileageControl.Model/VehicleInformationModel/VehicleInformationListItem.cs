@@ -9,7 +9,7 @@ namespace VehicleMileageControl.Model.VehicleInformation
 {
     public class VehicleInformationListItem
     {
-        [Display(Name = "Vehicle InformationId")]
+        [Display(Name = "Vehicle Information Id")]
         public int VehicleInformationId { get; set; }
     }
 }

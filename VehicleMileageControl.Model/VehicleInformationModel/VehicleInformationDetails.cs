@@ -9,9 +9,8 @@ namespace VehicleMileageControl.Model.VehicleInformation
 {
     public class VehicleInformationDetails
     {
-        [Display(Name = "Vehicle InformationId")]
+        [Display(Name = "Vehicle Information Id")]
         public int VehicleInformationId { get; set; }
-        public Guid VehicleInformationOwnerId { get; set; }
         public string a;
         public string b;
         public string c;

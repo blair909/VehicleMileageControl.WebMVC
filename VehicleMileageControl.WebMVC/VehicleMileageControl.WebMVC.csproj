@@ -220,6 +220,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Home\main01.css" />
     <Content Include="Views\Shared\main.css" />
     <Content Include="Views\VehicleInformation\Vehicle\Battery.jpg" />
     <Content Include="Views\VehicleInformation\Vehicle\Oil.jpg" />
