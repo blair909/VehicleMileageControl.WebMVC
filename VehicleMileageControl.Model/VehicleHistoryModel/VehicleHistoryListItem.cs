@@ -9,9 +9,9 @@ namespace VehicleMileageControl.Model.VehicleHistoryModel
 {
     public class VehicleHistoryListItem
     {
+        public Guid VehicleHistoryOwnerId { get; set; }
         [Display(Name = "Vehicle History Id")]
         public int VehicleHistoryId { get; set; }
-        [Required]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
         [Display(Name = "Vehicle Make")]
@@ -19,14 +19,7 @@ namespace VehicleMileageControl.Model.VehicleHistoryModel
         [Display(Name = "Vehicle Year")]
         public int VehicleYear { get; set; }
         [Display(Name = "Date Serviced")]
-        public DateTime ServiceDate
-        {
-            get { return ServiceDate; }
-            set
-            {
-                ServiceDate.ToString("MM/dd/yyyy");
-            }
-        }
+        public DateTime ServiceDate { get; set; }
         [Display(Name = "Odometer Mileage")]
         public int OdometerMileage { get; set; }
     }

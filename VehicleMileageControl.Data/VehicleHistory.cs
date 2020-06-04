@@ -27,7 +27,6 @@ namespace VehicleMileageControl.Data
         public string LicenseNo { get; set; }
         [Required]
         public string VinNo { get; set; }
-        [Required]
         public DateTime ServiceDate { get; set; }
         [Required]
         public int OdometerMileage { get; set; }

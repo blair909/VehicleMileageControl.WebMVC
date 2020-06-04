@@ -20,10 +20,10 @@ namespace VehicleMileageControl.Service
             var entity =
                 new VehicleHistory()
                 {
+                    VehicleHistoryOwnerId = model.VehicleHistoryOwnerId,
                     VehicleHistoryId = model.VehicleHistoryId,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
-                    FullName = model.FullName,
                     VehicleMake = model.VehicleMake,
                     VehicleModel = model.VehicleModel,
                     VehicleYear = model.VehicleYear,
@@ -61,6 +61,7 @@ namespace VehicleMileageControl.Service
                             e =>
                                 new VehicleHistoryListItem
                                 {
+                                    VehicleHistoryOwnerId = e.VehicleHistoryOwnerId,
                                     VehicleHistoryId = e.VehicleHistoryId,
                                     LastName = e.LastName,
                                     VehicleMake = e.VehicleMake,
@@ -83,10 +84,10 @@ namespace VehicleMileageControl.Service
                 return
                     new VehicleHistoryDetails
                     {
+                        VehicleHistoryOwnerId = entity.VehicleHistoryOwnerId,
                         VehicleHistoryId = entity.VehicleHistoryId,
                         FirstName = entity.FirstName,
                         LastName = entity.LastName,
-                        FullName = entity.FullName,
                         VehicleMake = entity.VehicleMake,
                         VehicleModel = entity.VehicleModel,
                         VehicleYear = entity.VehicleYear,
@@ -116,10 +117,10 @@ namespace VehicleMileageControl.Service
                         .VehicleHistorys
                         .Single(e => e.VehicleHistoryId == model.VehicleHistoryId && e.VehicleHistoryOwnerId == _vehicleHistoryUserId);
 
+                entity.VehicleHistoryOwnerId = model.VehicleHistoryOwnerId;
                 entity.VehicleHistoryId = model.VehicleHistoryId;
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;
-                entity.FullName = model.FullName;
                 entity.VehicleMake = model.VehicleMake;
                 entity.VehicleModel = model.VehicleModel;
                 entity.VehicleYear = model.VehicleYear;

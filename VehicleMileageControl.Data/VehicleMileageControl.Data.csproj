@@ -91,6 +91,14 @@
     <Compile Include="Migrations\202006040523175_ForeignKeyDBFix.Designer.cs">
       <DependentUpon>202006040523175_ForeignKeyDBFix.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006040813446_Hate.cs" />
+    <Compile Include="Migrations\202006040813446_Hate.Designer.cs">
+      <DependentUpon>202006040813446_Hate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006040852050_derp.cs" />
+    <Compile Include="Migrations\202006040852050_derp.Designer.cs">
+      <DependentUpon>202006040852050_derp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Note.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,6 +113,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202006040523175_ForeignKeyDBFix.resx">
       <DependentUpon>202006040523175_ForeignKeyDBFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006040813446_Hate.resx">
+      <DependentUpon>202006040813446_Hate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006040852050_derp.resx">
+      <DependentUpon>202006040852050_derp.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

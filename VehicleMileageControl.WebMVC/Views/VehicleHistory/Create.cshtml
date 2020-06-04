@@ -13,7 +13,7 @@
     <div class="form-horizontal">
         <h4>VehicleHistoryCreate</h4>
         <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
         <div class="form-group">
             @Html.LabelFor(model => model.VehicleHistoryId, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -75,6 +75,14 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.VinNo, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.VinNo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ServiceDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ServiceDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ServiceDate, "", new { @class = "text-danger" })
             </div>
         </div>
 
