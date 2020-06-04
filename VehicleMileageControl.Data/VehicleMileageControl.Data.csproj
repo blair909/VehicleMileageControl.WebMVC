@@ -107,6 +107,10 @@
     <Compile Include="Migrations\202006041455429_nono.Designer.cs">
       <DependentUpon>202006041455429_nono.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006041652139_idk.cs" />
+    <Compile Include="Migrations\202006041652139_idk.Designer.cs">
+      <DependentUpon>202006041652139_idk.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Note.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -133,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006041455429_nono.resx">
       <DependentUpon>202006041455429_nono.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006041652139_idk.resx">
+      <DependentUpon>202006041652139_idk.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

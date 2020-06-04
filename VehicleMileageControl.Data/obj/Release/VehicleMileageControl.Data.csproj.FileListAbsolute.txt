@@ -39,3 +39,4 @@ C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageCo
 C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.Data\obj\Release\VehicleMileageControl.Data.Migrations.derp.resources
 C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.Data\obj\Release\VehicleMileageControl.Data.Migrations.why.resources
 C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.Data\obj\Release\VehicleMileageControl.Data.Migrations.nono.resources
+C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.Data\obj\Release\VehicleMileageControl.Data.Migrations.idk.resources
