@@ -1,59 +1,45 @@
-﻿@model IEnumerable<VehicleMileageControl.Data.Note>
+﻿@model IEnumerable<VehicleMileageControl.Model.NoteModel.NoteListItem>
 
 @{
-    ViewBag.Title = "Notes";
+    ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<head>
+    <link href="~/Views/Shared/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="one">
+    <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Make a Note", "Create")
-</p>
-
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.NoteOwnerId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NoteId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NoteTitle)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NoteContent)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VehicleHistoryId)
-        </th>
-        <th>
-
-        </th>
-    </tr>
-    @foreach (var item in Model)
-    {
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.NoteOwnerId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NoteId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NoteTitle)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NoteContent)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.VehicleHistoryId)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.NoteId }) |
-                @Html.ActionLink("More Information", "Details", new { id = item.NoteId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.NoteId })
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.NoteId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NoteTitle)
+            </th>
+            <th></th>
         </tr>
-    }
-</table>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NoteId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NoteTitle)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>

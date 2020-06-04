@@ -35,3 +35,7 @@ C:\Users\Carson Blair\Source\Repos\VehicleMileageControl.WebMVC\VehicleMileageCo
 C:\Users\Carson Blair\Source\Repos\VehicleMileageControl.WebMVC\VehicleMileageControl.Data\obj\Release\VehicleMileageControl.Data.pdb
 C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.Data\obj\Release\VehicleMileageControl.Data.Migrations.ForeignKeyDBFix.resources
 C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.Data\obj\Release\VehicleMileageControl.Data.csproj.GenerateResource.cache
+C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.Data\obj\Release\VehicleMileageControl.Data.Migrations.Hate.resources
+C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.Data\obj\Release\VehicleMileageControl.Data.Migrations.derp.resources
+C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.Data\obj\Release\VehicleMileageControl.Data.Migrations.why.resources
+C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.Data\obj\Release\VehicleMileageControl.Data.Migrations.nono.resources
