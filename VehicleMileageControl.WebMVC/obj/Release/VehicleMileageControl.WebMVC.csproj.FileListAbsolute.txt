@@ -121,3 +121,7 @@ C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageCo
 C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.WebMVC\bin\VehicleMileageControl.Service.dll
 C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.WebMVC\bin\VehicleMileageControl.Service.pdb
 C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.WebMVC\bin\VehicleMileageControl.Service.dll.config
+C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.WebMVC\bin\Microsoft.Configuration.ConfigurationBuilders.Base.dll
+C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.WebMVC\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll
+C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.WebMVC\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
+C:\Users\Carson Blair\source\repos\VehicleMileageControl.WebMVC\VehicleMileageControl.WebMVC\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
